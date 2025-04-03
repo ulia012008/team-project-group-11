@@ -1,0 +1,107 @@
+.about-me-section {
+    max-width: 343px;
+    min-width: 320px;
+}
+
+.about-me-text-container {
+    border-radius: 24px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--cards);
+
+    margin-bottom: 16px;
+}
+
+.about-me-text {
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 117%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--main-text);
+    padding: 32px;
+
+}
+
+.about-me-red {
+    color: var(--button-text);
+}
+
+.about-me-grey {
+    color: rgba(250, 250, 250, 0.4);
+}
+
+
+
+.accordion-container {
+    padding: 0;
+    overflow: hidden;
+}
+
+.ac {
+    border-bottom: 1px solid #444;
+    list-style: none;
+}
+
+.ac-header {
+    margin: 0;
+}
+
+.ac-trigger {
+    width: 100%;
+    height: 68px;
+    background: none;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.4);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ac-trigger:hover {}
+
+.ac-panel {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+
+
+.ac-text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: var(--main-text);
+    width: 343px;
+}
+
+
+.ac-panel.open {
+    display: block;
+    max-height: 500px;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.ac-panel.open+.ac-header .arrow {
+    transform: rotate(180deg);
+    /* Стрелка вверх */
+}
