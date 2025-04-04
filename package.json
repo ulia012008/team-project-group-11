@@ -17,7 +17,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fontsource/inter-tight": "^5.2.5",
     "axios": "^1.8.4",
+    "granim": "^2.0.0",
     "simplelightbox": "^2.14.3",
     "swiper": "^11.2.6",
     "vite-plugin-full-reload": "^1.2.0",
