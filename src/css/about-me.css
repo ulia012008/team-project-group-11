@@ -1,8 +1,3 @@
-.about-me-section {
-    max-width: 343px;
-    min-width: 320px;
-}
-
 .about-me-text-container {
     border-radius: 24px;
     height: 500px;
@@ -10,8 +5,14 @@
     flex-direction: column;
     gap: 20px;
     background: var(--cards);
-
     margin-bottom: 16px;
+}
+
+.about-me-text-container img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+
 }
 
 .about-me-text {
