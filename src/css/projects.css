@@ -1,10 +1,11 @@
 .projects {
     /* delete y paddings */
     padding: 64px 16px 64px 16px;
-    /* margin: 0 auto; */
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
+
 
 .projects-title {
     font-weight: 600;
@@ -18,20 +19,23 @@
 
 .projects-cards {
     display: flex;
-    /* flex-wrap: nowrap;
-    gap: 20px; */
+    transition: transform 0.5s ease-in-out;
     width: 100%;
     margin-bottom: 32px;
     /* position: relative; */
 }
 
 .projects-card {
-    /* position: absolute; */
     flex: 0 0 100%;
-        /* Each card will take up 100% of the container */
     transition: transform 0.5s ease-in-out;
     background-color: #fafafa;
     border-radius: 24px;
+    width: 100%;
+    /* position: absolute; */
+}
+
+.projects-card:first-child {
+    z-index: 999;
 }
 
 .projects-card-content {
@@ -108,27 +112,45 @@
 }
 
 @media (min-width: 768px) {
+    .projects-card {
+        flex: 0 0 80%;
+        /* Reduce card width on smaller screens */
+    }
+
+    .projects-card-content {
+        padding: 64px;
+    }
+
     .projects {
         /* delete y paddings */
         padding: 64px 32px 64px 32px;
-
     }
 
-        .projects-card-title {
-            font-size: 44px;
-            line-height: 100%;
-        }
+    .projects-card-title {
+        font-size: 44px;
+        line-height: 100%;
+    }
+
+    .projects-card-img {
+        padding: 120px 45px;
+    }
+}
+
+
+@media (max-width: 1439px) {
+    .projects-card {
+        max-width: 704px;
+    }
 }
 
 @media (min-width: 1440px) {
     .projects-card {
         display: flex;
         justify-content: space-between;
-        min-width: 1376px;
+        max-width: 1376px;
     }
 
     .projects-card-content {
-        padding: 64px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
