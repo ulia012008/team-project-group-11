@@ -1,0 +1,171 @@
+/* Styles for Mobile devices */
+.container {
+    min-width: 320px;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+
+.reviews {
+    padding: 165px 25px;
+}
+
+.title-reviews {
+    font-family: "Inter Tight", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.4);
+
+    width: 284px;
+    height: 24px;
+    margin-bottom: 32px;
+}
+
+
+.list-reviews {
+    display: block;
+    gap: 16px;
+
+}
+
+.item-reviews {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 20px;
+    padding: 32px 24px;
+    max-width: 332px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icon-reviews {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.div-reviews {
+    width: 284px;
+    height: 158px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.list-title-reviews {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+
+}
+
+.text-reviews {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+    max-height: 120px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    /* Кількість рядків перед обрізанням */
+    overflow: hidden;
+}
+
+.reviews-button-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    gap: 20px;
+}
+
+.reviews-icon {
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+    padding: 18px;
+    stroke-width: 2px;
+    stroke: #fafafa;
+    fill: none;
+}
+
+
+/* ? */
+/* * Swiper styles */
+/* ? */
+
+
+.swiper-button-next {}
+
+
+.swiper-button-prev {}
+
+.swiper-button-next.disabled,
+.swiper-button-prev.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.swiper {
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+
+.swiper-wrapper {
+    display: flex;
+    /* Розміщуємо слайди горизонтально */
+    overflow: hidden;
+}
+
+/* Стиль для кожного слайда */
+.swiper-slide {
+    flex: 0 0 25%;
+    /* Показуємо 4 елементи одночасно */
+    box-sizing: border-box;
+    /* Враховуємо відступи в розмірах */
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ! */
+/* * Error-message style */
+/* ! */
+
+
+.error-message {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #ed3b44;
+    text-align: center;
+}
