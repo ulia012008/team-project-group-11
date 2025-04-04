@@ -1,0 +1,40 @@
+.covers {
+    background-image: url(../img/covers/elements_vectors.png);
+    position: relative;
+}
+
+ .scroll-wrapper {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      box-sizing: border-box;
+      border-top: 2px solid #333;
+      border-bottom: 2px solid #333;
+      padding: 20px 0;
+    }
+
+    ul.scroll-list {
+      display: inline-flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      animation: scroll 40s linear infinite;
+    }
+
+    ul.scroll-list li {
+      margin: 0 20px;
+      flex-shrink: 0;
+    }
+
+    ul.scroll-list img {
+      height: 180px;
+      width: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
