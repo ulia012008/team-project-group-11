@@ -90,12 +90,14 @@
     letter-spacing: -0.02em;
     color: var(--main-text);
     width: 343px;
+    padding-bottom: 20px;
+    height: 100%;
 }
 
 
 .ac-panel.open {
     display: block;
-    max-height: 500px;
+    max-height: 650px;
 }
 
 .arrow {
