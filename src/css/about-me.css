@@ -39,7 +39,7 @@
 
 
 .accordion-container {
-    padding: 0;
+
     overflow: hidden;
 }
 
@@ -89,7 +89,7 @@
     line-height: 150%;
     letter-spacing: -0.02em;
     color: var(--main-text);
-    width: 343px;
+
     padding-bottom: 20px;
     height: 100%;
 }
@@ -107,4 +107,40 @@
 .ac-panel.open+.ac-header .arrow {
     transform: rotate(180deg);
     /* Стрелка вверх */
+}
+
+/* навички */
+.swiper-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.swiper-ul {
+    width: 130px;
+    align-items: center;
+}
+
+.swiper-li {
+    border-bottom: 1px solid #444;
+    list-style: none;
+    width: 130px;
+    height: 130px;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: var(--main-text);
+    background-color: none;
+
+    border-radius: 50%;
+
+    width: 96px;
+    height: 24px;
+
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.swiper-li-active {
+    background-color: var(--button-text);
 }
