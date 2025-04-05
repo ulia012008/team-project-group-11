@@ -1,40 +1,95 @@
 .covers {
     background-image: url(../img/covers/elements_vectors.png);
-    position: relative;
+    padding: 50px 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
 }
 
- .scroll-wrapper {
-      overflow: hidden;
-      white-space: nowrap;
-      width: 100%;
-      box-sizing: border-box;
-      border-top: 2px solid #333;
-      border-bottom: 2px solid #333;
-      padding: 20px 0;
+.rotated-row {
+    overflow: hidden;
+    transform: rotate(10deg);
+}
+
+.row-left {
+    transform: rotate(-10deg);
+}
+
+.row-right {
+    transform: rotate(-10deg);
+}
+
+
+.scroll-row {
+    display: flex;
+    width: max-content;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.scroll-row li {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+
+}
+
+
+.scroll-row img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.animate-left,
+.animate-right,
+.animate-left-second {
+    animation: none;
+}
+
+.start-animation .animate-left {
+    animation: scrollLeft 50s linear infinite;
+}
+
+.start-animation .animate-right {
+    animation: scrollRight 50s linear infinite;
+}
+
+.start-animation .animate-left-second {
+    animation: scrollLeftSecond 50s linear infinite;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
     }
 
-    ul.scroll-list {
-      display: inline-flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      animation: scroll 40s linear infinite;
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-20%);
     }
 
-    ul.scroll-list li {
-      margin: 0 20px;
-      flex-shrink: 0;
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes scrollLeftSecond {
+    0% {
+        transform: translateX(0);
     }
 
-    ul.scroll-list img {
-      height: 180px;
-      width: auto;
-      border-radius: 8px;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    100% {
+        transform: translateX(-20%);
     }
-
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
+}
