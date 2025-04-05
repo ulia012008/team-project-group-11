@@ -22,13 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // finish about me Accordion
 
-// swipe
-import { initSkillsSliderAbout } from './js/about-me-swipe';
-
-document.addEventListener('DOMContentLoaded', () => {
-  initSkillsSliderAbout();
-});
-// finishswipe
 
 
 import { init } from './js/reviews.js';
