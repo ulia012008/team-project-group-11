@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // finishswipe
 
-// FAQ
 
 import { init } from './js/reviews.js';
 
