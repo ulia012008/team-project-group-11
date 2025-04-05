@@ -14,6 +14,12 @@ import { initAccordion } from './js/about-me-acc';
 document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
 });
+import { AccordionFaq } from './js/faq.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  AccordionFaq();
+});
+
 // finish about me Accordion
 
 // <<<<<<< about-me
@@ -26,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // // finishswipe
 // =======
 
-
+// FAQ
 
 // reviews start
 
@@ -35,46 +41,39 @@ import Swiper from 'swiper';
 // import Swiper styles
 import 'swiper/css';
 
-
 import { backendData } from './js/getting-data-reviews';
 import { renderElements } from './js/render-function-reviews';
 
-const buttonElemLeft = document.querySelector(".swiper-button-next");
-const buttonElemRight = document.querySelector(".swiper-button-prev");
-const errorMessage = document.createElement("p");
+const buttonElemLeft = document.querySelector('.swiper-button-next');
+const buttonElemRight = document.querySelector('.swiper-button-prev');
+const errorMessage = document.createElement('p');
 
-errorMessage.textContent = "Not found";
-errorMessage.classList.add("error-message");
-errorMessage.style.display = "none"; // Спочатку прихований
+errorMessage.textContent = 'Not found';
+errorMessage.classList.add('error-message');
+errorMessage.style.display = 'none'; // Спочатку прихований
 
-document.querySelector(".reviews").appendChild(errorMessage);
-
-
-
+document.querySelector('.reviews').appendChild(errorMessage);
 
 let swiper;
 
 async function init() {
-
   try {
     const data = await backendData();
     if (!data || data.length === 0) {
-      errorMessage.style.display = "block"; // Показуємо помилку
-      buttonElemLeft.style.display = "none";
-      buttonElemRight.style.display = "none";
+      errorMessage.style.display = 'block'; // Показуємо помилку
+      buttonElemLeft.style.display = 'none';
+      buttonElemRight.style.display = 'none';
       return;
     }
 
-
     renderElements(data);
-
 
     // Ініціалізація Swiper
     swiper = new Swiper('.swiper', {
       direction: 'horizontal',
-      loop: false,  
-      slidesPerView: 4,  // Показуємо 4 слайди одночасно
-      spaceBetween: 20,  // Відстань між слайдами
+      loop: false,
+      slidesPerView: 4, // Показуємо 4 слайди одночасно
+      spaceBetween: 20, // Відстань між слайдами
       keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -84,22 +83,14 @@ async function init() {
         prevEl: '.swiper-button-prev',
       },
     });
-    
   } catch (error) {
-    console.log("Помилка:", error);
+    console.log('Помилка:', error);
   }
-
-   
 }
 
-
-buttonElemLeft.addEventListener("click", () => swiper.slidePrev());
-buttonElemRight.addEventListener("click", () => swiper.slideNext());
-
+buttonElemLeft.addEventListener('click', () => swiper.slidePrev());
+buttonElemRight.addEventListener('click', () => swiper.slideNext());
 
 init();
 
-
-
 // finish reviews
-

@@ -38,21 +38,21 @@
 
 
 
-.accordion-container {
+.accordion-container-about-me {
 
     overflow: hidden;
 }
 
-.ac {
+.ac-about-me {
     border-bottom: 1px solid #444;
     list-style: none;
 }
 
-.ac-header {
+.ac-header-about-me {
     margin: 0;
 }
 
-.ac-trigger {
+.ac-trigger-about-me {
     width: 100%;
     height: 68px;
     background: none;
@@ -71,9 +71,9 @@
     align-items: center;
 }
 
-.ac-trigger:hover {}
+.ac-trigger-about-me:hover {}
 
-.ac-panel {
+.ac-panel-about-me {
     display: none;
     max-height: 0;
     overflow: hidden;
@@ -82,7 +82,7 @@
 
 
 
-.ac-text {
+.ac-text-about-me {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
@@ -95,34 +95,34 @@
 }
 
 
-.ac-panel.open {
+.ac-panel-about-me.open {
     display: block;
     max-height: 650px;
 }
 
-.arrow {
+.arrow-about-me {
     transition: transform 0.3s ease;
 }
 
-.ac-panel.open+.ac-header .arrow {
+.ac-panel-about-me .open+.ac-header-about-me .arrow-about-me {
     transform: rotate(180deg);
     /* Стрелка вверх */
 }
 
 /* навички */
 
-.skills-swiper {
+.skills-swiper-about-me {
     padding: 20px;
     background-color: #1e1e1e;
 }
 
-.swiper-slide {
+.swiper-slide-about-me {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.circle {
+.circle-about-me {
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -136,15 +136,15 @@
     transition: transform 0.3s;
 }
 
-.red {
+.red-about-me {
     background-color: #e74c3c;
 }
 
-.outline {
+.outline-about-me {
     border: 1px solid #aaa;
     background-color: transparent;
 }
 
-.swiper-button-next {
+.swiper-button-next-about-me {
     color: white;
 }
