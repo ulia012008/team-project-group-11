@@ -92,14 +92,14 @@
   transform: rotate(180deg);
 }
 .open-arrow-icon.rotated {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   transition: transform 0.3s ease;
 }
 
-.ac-panel {
+.ac-panel.faq {
   display: none;
 }
-.ac-panel.open {
+.ac-panel.faq.open {
   display: block;
 }
 .ac-text.faq {
