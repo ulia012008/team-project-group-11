@@ -1,10 +1,10 @@
 import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
 
-new Accordion(".accordion-container.faq");
+new Accordion(".accordion-container-faq");
 
 export function AccordionFaq() {
-    const buttonsFaq = document.querySelectorAll(".ac-trigger.faq");
+    const buttonsFaq = document.querySelectorAll(".ac-trigger-faq");
 
     buttonsFaq.forEach(button => {
         button.addEventListener("click", () => {
