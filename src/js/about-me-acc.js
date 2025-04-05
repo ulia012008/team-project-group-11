@@ -27,7 +27,7 @@ export function initAccordion() {
         const icon = button.querySelector('.toggle-icon-about-me');
 
         if (icon) {
-          const arrow = icon.querySelector('.arrow-about-about-me');
+          const arrow = icon.querySelector('.arrow-about-me');
           if (arrow) {
             arrow.style.transform = 'rotate(0deg)';
           }

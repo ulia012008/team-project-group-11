@@ -22,14 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // finish about me Accordion
 
-// <<<<<<< about-me
-// // swipe
-// import { initSkillsSlider } from './js/about-me-swipe';
+// swipe
+import { initSkillsSliderAbout } from './js/about-me-swipe';
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   initSkillsSlider();
-// });
-// // finishswipe
+document.addEventListener('DOMContentLoaded', () => {
+  initSkillsSliderAbout();
+});
+// finishswipe
 // =======
 
 // FAQ
