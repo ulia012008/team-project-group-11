@@ -2,12 +2,12 @@ import Swiper from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 
 export function initSkillsSlider() {
-  const swiper = new Swiper('.skills-swiper', {
+  const swiper = new Swiper('.skills-swiper-about-me', {
     slidesPerView: 2,
     spaceBetween: 20,
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
+      nextEl: '.swiper-button-next-about-me',
     },
     breakpoints: {
       768: {
@@ -25,16 +25,20 @@ export function initSkillsSlider() {
   });
 
   function updateActiveCircle() {
-    const slides = document.querySelectorAll('.swiper-slide .circle');
+    const slides = document.querySelectorAll(
+      '.swiper-slide-about-me .circle-about-me'
+    );
     slides.forEach(circle => {
-      circle.classList.remove('red');
-      circle.classList.add('outline');
+      circle.classList.remove('red-about-me');
+      circle.classList.add('outline-about-me');
     });
 
-    const activeSlide = document.querySelector('.swiper-slide-active .circle');
+    const activeSlide = document.querySelector(
+      '.swiper-slide-active-about-me .circle-about-me'
+    );
     if (activeSlide) {
-      activeSlide.classList.remove('outline');
-      activeSlide.classList.add('red');
+      activeSlide.classList.remove('outline-about-me');
+      activeSlide.classList.add('red-about-me');
     }
   }
 
