@@ -13,3 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
 });
 // finish about me Accordion
+
+import './js/covers';
