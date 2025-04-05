@@ -30,8 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillsSliderAbout();
 });
 // finishswipe
-// =======
-=======
+
 
 import './js/covers';
 
