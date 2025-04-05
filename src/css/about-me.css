@@ -110,37 +110,41 @@
 }
 
 /* навички */
-.swiper-container {
-    display: flex;
-    flex-direction: row;
+
+.skills-swiper {
+    padding: 20px;
+    background-color: #1e1e1e;
 }
 
-.swiper-ul {
-    width: 130px;
+.swiper-slide {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.swiper-li {
-    border-bottom: 1px solid #444;
-    list-style: none;
+.circle {
     width: 130px;
     height: 130px;
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: -0.02em;
-    color: var(--main-text);
-    background-color: none;
-
     border-radius: 50%;
-
-    width: 96px;
-    height: 24px;
-
-
-    cursor: pointer;
-    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-.swiper-li-active {
-    background-color: var(--button-text);
+.red {
+    background-color: #e74c3c;
+}
+
+.outline {
+    border: 1px solid #aaa;
+    background-color: transparent;
+}
+
+.swiper-button-next {
+    color: white;
 }
