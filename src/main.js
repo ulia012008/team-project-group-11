@@ -9,9 +9,17 @@ import '@fontsource/inter-tight/900.css';
 
 // about me Accordion start
 
-import { initAccordion } from './js/about-me';
+import { initAccordion } from './js/about-me-acc';
 
 document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
 });
 // finish about me Accordion
+
+// swipe
+import { initSkillsSlider } from './js/about-me-swipe';
+
+document.addEventListener('DOMContentLoaded', () => {
+  initSkillsSlider();
+});
+// finishswipe
