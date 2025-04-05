@@ -1,29 +1,21 @@
-/* Styles for Mobile devices */
-.container {
-    min-width: 320px;
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-/* Styles for Tablet devices */
-@media only screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-}
-
-/* Styles for Desktop devices */
-@media only screen and (min-width: 1440px) {
-    .container {
-        max-width: 1440px;
-    }
-}
-
-
 .reviews {
-    padding: 165px 25px;
+    padding: 64px 16px;
 }
+
+@media screen and (min-width: 768px) {
+    .reviews {
+        padding: 96px 32px;
+        }
+}
+
+
+@media only screen and (min-width: 1440px) {
+    .reviews {
+        padding: 165px 25px;
+        }
+}
+
+
 
 .title-reviews {
     font-family: "Inter Tight", sans-serif;
@@ -40,36 +32,69 @@
 }
 
 
+
 .list-reviews {
     display: block;
-    gap: 16px;
-
+    padding: 0;
+    margin: 0;
+    
 }
+
+@media only screen and (min-width: 768px) {
+    .list-reviews {
+            display: block;
+            gap: 16px;
+            padding: 0;
+            margin: 0;
+        }
+}
+
 
 .item-reviews {
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
     padding: 32px 24px;
-    max-width: 332px;
-    height: auto;
+    width: 342px;
+    height: 302px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
+
+@media only screen and (min-width: 768px) {
+    .item-reviews {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        }
+}
+
+@media only screen and (min-width: 1400px) {
+    .item-reviews {
+        max-width: 332px;
+        height: auto;
+        }
+}
+
 
 .icon-reviews {
     width: 48px;
     height: 48px;
     border-radius: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 32px;
 }
 
 .div-reviews {
-    width: 284px;
+    width: 296px;
     height: 158px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+@media only screen and (min-width: 1400px) {
+    .div-reviews {
+        width: 284px;
+        }
 }
 
 .list-title-reviews {
@@ -82,6 +107,7 @@
 
 }
 
+
 .text-reviews {
     font-family: "Inter Tight", sans-serif;
     font-weight: 500;
@@ -92,10 +118,11 @@
     max-height: 120px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    /* Кількість рядків перед обрізанням */
+    -webkit-line-clamp: 5; /* Кількість рядків перед обрізанням */
     overflow: hidden;
 }
+
+
 
 .reviews-button-icon {
     display: flex;
@@ -104,13 +131,25 @@
     gap: 20px;
 }
 
+
+
 .reviews-icon {
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
-    padding: 18px;
     stroke-width: 2px;
     stroke: #fafafa;
     fill: none;
+        padding: 14px;
+        width: 52px;
+        height: 52px;
+}
+
+@media only screen and (min-width: 768px) {
+    .reviews-icon {
+            padding: 18px;
+            width: 68px;
+            height: 68px;
+        }
 }
 
 
@@ -130,27 +169,50 @@
     pointer-events: none;
 }
 
+
 .swiper {
-    width: 100%;
-    padding: 20px;
     overflow: hidden;
+    width: 100%; /* адаптивно */
+    max-width: 344px; /* ширина одного слайду */
+    margin: 0 auto;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .swiper {
+        max-width: 716px;
+    }
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .swiper {
+        max-width: 1386px;
+    }
 }
 
 
 .swiper-wrapper {
-    display: flex;
-    /* Розміщуємо слайди горизонтально */
-    overflow: hidden;
+   display: flex; /* Розміщуємо слайди горизонтально */
+   
 }
 
-/* Стиль для кожного слайда */
+
+
 .swiper-slide {
-    flex: 0 0 25%;
-    /* Показуємо 4 елементи одночасно */
-    box-sizing: border-box;
-    /* Враховуємо відступи в розмірах */
+    box-sizing: border-box; /* Враховуємо відступи в розмірах */
     display: flex;
     justify-content: center;
+    width: 344px !important; /* Примусово встановлюємо ширину */
+    flex-shrink: 0; /* Щоб не стискалося */
+}
+
+
+@media only screen and (min-width: 1400px) {
+    .swiper-slide {
+        width: 332px !important; /* Примусово встановлюємо ширину */
+        height: 302px !important; /* Примусово встановлюємо висоту */
+        }
 }
 
 
@@ -169,3 +231,4 @@
     color: #ed3b44;
     text-align: center;
 }
+

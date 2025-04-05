@@ -62,8 +62,7 @@ async function init() {
     swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       loop: false,  
-      slidesPerView: 4,  // Показуємо 4 слайди одночасно
-      spaceBetween: 20,  // Відстань між слайдами
+      watchOverflow: true, 
       keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -72,8 +71,23 @@ async function init() {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    });
+
+      // адаптивність 
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1400: {
+      slidesPerView: 4,
+    },
+  },
+});
     
+
+
   } catch (error) {
     console.log("Помилка:", error);
   }
