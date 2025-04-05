@@ -22,20 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // finish about me Accordion
 
-import './js/covers.js';
 
-// <<<<<<< about-me
-// // swipe
-// import { initSkillsSlider } from './js/about-me-swipe';
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   initSkillsSlider();
-// });
-// // finishswipe
-
-// FAQ
-
-// reviews start
 
 import { init } from './js/reviews.js';
 
