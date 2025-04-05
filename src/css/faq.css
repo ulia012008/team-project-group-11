@@ -89,8 +89,18 @@
   padding: 7px;
 }
 .open-arrow-icon {
+  transform: rotate(180deg);
 }
+.open-arrow-icon.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
 .ac-panel {
+  display: none;
+}
+.ac-panel.open {
+  display: block;
 }
 .ac-text.faq {
   font-family: var(--font-family);
