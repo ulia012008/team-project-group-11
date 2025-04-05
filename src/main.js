@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // finish about me Accordion
 
-
 // swipe
 import { initSkillsSliderAbout } from './js/about-me-swipe';
 
@@ -32,28 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // finishswipe
 
 
-import './js/covers';
-
-
-// // swipe
-// import { initSkillsSlider } from './js/about-me-swipe';
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   initSkillsSlider();
-// });
-// // finishswipe
-
-
-
-// FAQ
-
-// reviews start
-
-
-
 import { init } from './js/reviews.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   init();
 });
-
