@@ -8,8 +8,7 @@
 }
 
 .rotated-row {
-    overflow: hidden;
-    transform: rotate(10deg);
+       transform: rotate(10deg);
 }
 
 .row-left {
@@ -42,7 +41,7 @@
 .scroll-row img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
     display: block;
 }
 
