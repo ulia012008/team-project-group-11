@@ -8,13 +8,6 @@
     margin-bottom: 16px;
 }
 
-.about-me-text-container img {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 24px;
-
-}
-
 .about-me-text {
     font-weight: 500;
     font-size: 23px;
@@ -25,6 +18,29 @@
     padding: 32px;
 
 }
+
+.about-me-text-container img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+
+
+}
+
+@media only screen and (min-width: 768px) {
+    .about-me-text-container {
+        width: 704px;
+        height: 700px;
+    }
+
+    .about-me-text {
+        font-size: 38px;
+        line-height: 105%;
+        letter-spacing: -0.03em;
+    }
+}
+
+
 
 .about-me-red {
     color: var(--button-text);
@@ -112,7 +128,17 @@
 
 @media only screen and (min-width: 768px) {}
 
-@media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
+    .about-me-content {
+        border-radius: 24px;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        background: var(--cards);
+        margin-bottom: 16px;
+    }
+}
 
 /* навички */
 .swiper-about-me {
