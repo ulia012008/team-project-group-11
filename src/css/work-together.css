@@ -1,3 +1,8 @@
  .test-container-br {
-     background-image: url('./img/hero.png');
+
+     background-image: url('../img/hero.png');
+     background-size: cover;
+     background-position: center;
+     height: 900px;
+     width: 100%;
  }
