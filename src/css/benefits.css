@@ -8,10 +8,16 @@
 }
 .icon-benefits {
     border-radius: 10px;
-    background-color: #ED3B44;
     padding: 12px;
-    margin-bottom: 64px;
+    width: 48px;
+    height: 48px;
+    background: #ED3B44;
+    border-radius: 10px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
+
 .list-item > .icon-benefits {
     gap: 24px; 
 }
