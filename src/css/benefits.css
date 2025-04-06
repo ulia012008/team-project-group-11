@@ -1,18 +1,18 @@
 .container.benefits-section {
-    margin-bottom: 0 15px 20px 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     gap: 32px;
+    margin-bottom: 64px;
 }
-.icon {
+.icon-benefits {
     border-radius: 10px;
     background-color: #ED3B44;
     padding: 12px;
     margin-bottom: 64px;
 }
-.list-item > .icon {
+.list-item > .icon-benefits {
     gap: 24px; 
 }
 .benefits-title {
@@ -79,5 +79,23 @@
 }
 .list-item:not(:last-child) {
     margin-bottom: 20px;
+}
+.button-benefits {
+color: rgba(250, 250, 250, 1);
+background-color: rgba(28, 29, 32, 1);
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 18px 36px;
+gap: 10px;
+width: 187px;
+height: 55px;
+border: 1px solid rgba(250, 250, 250, 0.2);
+border-radius: 60px;
+flex: none;
+order: 1;
+flex-grow: 0;
 }
 
