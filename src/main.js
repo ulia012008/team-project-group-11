@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // finish about me Accordion
 
-
+import './js/covers.js';
 
 import { init } from './js/reviews.js';
 
