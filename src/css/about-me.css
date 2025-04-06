@@ -115,12 +115,26 @@
 @media only screen and (min-width: 1440px) {}
 
 /* навички */
-.skills-swiper-about-me {}
+.swiper-about-me {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.skills-swiper-about-me .swiper-slide {
+    width: 130px !important;
+    /* або конкретна ширина */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .circle-about-me {
@@ -149,6 +163,16 @@
 }
 
 .swiper-button-next-about-me {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 50%;
+    z-index: 10;
+
+    cursor: pointer;
     display: flex;
 }
 
@@ -156,4 +180,10 @@
 
     height: 32px;
     fill: rgba(250, 250, 250, 0.4);
+
+}
+
+.button-swiper-about-me:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
 }
