@@ -6,7 +6,7 @@
 <symbol id="icon-menu" viewBox="0 0 32 32">
 <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M4 11.334h24M4 20.666h24"></path>
 </symbol>
-<symbol id="icon-swiping-arrow" >
+<symbol id="icon-swiping-arrow" viewBox="0 0 32 32">
 <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.56" d="M5.76 16h20.48M18.56 8.32l7.68 7.68-7.68 7.68"></path>
 </symbol>
 <symbol id="icon-user" viewBox="0 0 32 32">

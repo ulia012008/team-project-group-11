@@ -1,0 +1,95 @@
+.covers {
+    background-image: url(../img/covers/elements_vectors.png);
+    padding: 50px 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.rotated-row {
+    overflow: hidden;
+    transform: rotate(10deg);
+}
+
+.row-left {
+    transform: rotate(-10deg);
+}
+
+.row-right {
+    transform: rotate(-10deg);
+}
+
+
+.scroll-row {
+    display: flex;
+    width: max-content;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.scroll-row li {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+
+}
+
+
+.scroll-row img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.animate-left,
+.animate-right,
+.animate-left-second {
+    animation: none;
+}
+
+.start-animation .animate-left {
+    animation: scrollLeft 50s linear infinite;
+}
+
+.start-animation .animate-right {
+    animation: scrollRight 50s linear infinite;
+}
+
+.start-animation .animate-left-second {
+    animation: scrollLeftSecond 50s linear infinite;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes scrollLeftSecond {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
