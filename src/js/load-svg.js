@@ -1,4 +1,4 @@
-fetch('/icons.svg')
+fetch('/src/img/icons.svg')
   .then(response => response.text())
   .then(data => {
     const div = document.createElement('div');
