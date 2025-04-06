@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build --base=/team-project-group-11/",
     "preview": "vite preview"
   },
@@ -14,26 +14,16 @@
     "postcss-sort-media-queries": "^5.2.0",
     "vite": "^5.4.6"
   },
-  "author": "Artem Shepeliuk <artemshepeliyk@gmail.com>",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "@fontsource/inter-tight": "^5.2.5",
+    "accordion-js": "^3.4.0",
     "axios": "^1.8.4",
     "granim": "^2.0.0",
     "simplelightbox": "^2.14.3",
     "swiper": "^11.2.6",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
-  },
-  "description": "Bu proje Vite kullanılarak oluşturulmuştur. Ek özelliklerin tanınması ve özelleştirilmesi için [belgelere bakın](https://vitejs.dev/).",
-  "main": "vite.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ulia012008/team-project-group-11.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/ulia012008/team-project-group-11/issues"
-  },
-  "homepage": "https://github.com/ulia012008/team-project-group-11#readme"
+  }
 }
