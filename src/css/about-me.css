@@ -16,10 +16,8 @@
 }
 
 .about-me-text {
-
-    font-family: var(--font-family);
     font-weight: 500;
-    font-size: 24px;
+    font-size: 23px;
     line-height: 117%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
@@ -38,21 +36,21 @@
 
 
 
-.accordion-container {
-    padding: 0;
+.accordion-container-about-me {
+    margin-bottom: 32px;
     overflow: hidden;
 }
 
-.ac {
+.ac-about-me {
     border-bottom: 1px solid #444;
     list-style: none;
 }
 
-.ac-header {
+.ac-header-about-me {
     margin: 0;
 }
 
-.ac-trigger {
+.ac-trigger-about-me {
     width: 100%;
     height: 68px;
     background: none;
@@ -69,11 +67,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
-.ac-trigger:hover {}
 
-.ac-panel {
+
+
+
+.ac-panel-about-me {
     display: none;
     max-height: 0;
     overflow: hidden;
@@ -82,29 +83,77 @@
 
 
 
-.ac-text {
+.ac-text-about-me {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: -0.02em;
     color: var(--main-text);
-    width: 343px;
+
     padding-bottom: 20px;
     height: 100%;
 }
 
 
-.ac-panel.open {
+.ac-panel-about-me.open {
     display: block;
     max-height: 650px;
 }
 
-.arrow {
+.arrow-about-me {
     transition: transform 0.3s ease;
 }
 
-.ac-panel.open+.ac-header .arrow {
+.ac-panel-about-me .open+.ac-header-about-me .arrow-about-me {
     transform: rotate(180deg);
     /* Стрелка вверх */
+}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 1440px) {}
+
+/* навички */
+.skills-swiper-about-me {}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-about-me {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: var(--main-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.red-about-me {
+    background-color: #e74c3c;
+}
+
+.outline-about-me {
+    border: 1px solid rgba(250, 250, 250, 0.4);
+    background-color: transparent;
+}
+
+.swiper-button-next-about-me {
+    display: flex;
+}
+
+.button-swiper-about-me {
+
+    height: 32px;
+    fill: rgba(250, 250, 250, 0.4);
 }
