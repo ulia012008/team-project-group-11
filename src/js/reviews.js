@@ -7,9 +7,8 @@ import 'swiper/css';
 import { backendData } from './getting-data-reviews';
 import { renderElements } from './render-function-reviews';
 
-
-const buttonElemLeft = document.querySelector('.swiper-button-next');
-const buttonElemRight = document.querySelector('.swiper-button-prev');
+const buttonElemLeft = document.querySelector('.swiper-button-prev');
+const buttonElemRight = document.querySelector('.swiper-button-next');
 const errorMessage = document.createElement('p');
 
 errorMessage.textContent = 'Not found';
@@ -36,10 +35,11 @@ export async function init() {
 
 
     // Ініціалізація Swiper
-    swiper = new Swiper('.swiper', {
+    swiper = new Swiper('.swiper-reviews', {
       direction: 'horizontal',
       loop: false,  
-      watchOverflow: true, 
+      watchOverflow: true,
+      wrapperClass: 'swiper-wrapper-reviews',
       keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -61,16 +61,39 @@ export async function init() {
       slidesPerView: 4,
     },
   },
-});
+    });
     
+    // Початковий стан кнопок
+    buttonElemLeft.disabled = true;
+    buttonElemLeft.classList.add('disabled'); 
 
+swiper.on('slideChange', () => {
+
+  if (swiper.isBeginning) {
+    buttonElemLeft.disabled = true;
+    buttonElemLeft.classList.add('disabled'); // додати клас для зміни стилю
+  } else {
+    buttonElemLeft.disabled = false;
+    buttonElemLeft.classList.remove('disabled'); // видалити клас для активної кнопки
+  }
+
+  if (swiper.isEnd) {
+    buttonElemRight.disabled = true;
+    buttonElemRight.classList.add('disabled'); // додати клас для зміни стилю
+  } else {
+    buttonElemRight.disabled = false;
+    buttonElemRight.classList.remove('disabled'); // видалити клас для активної кнопки
+  }
+});
+
+  
 
   } catch (error) {
     console.log("Помилка:", error);
   }
 
-   buttonElemLeft.addEventListener("click", () => swiper.slidePrev());
-   buttonElemRight.addEventListener("click", () => swiper.slideNext());
+  buttonElemLeft.addEventListener("click", () => swiper.slidePrev());
+  buttonElemRight.addEventListener("click", () => swiper.slideNext());
 
 }
 
