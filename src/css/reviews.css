@@ -68,7 +68,7 @@
     }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1440px) {
     .item-reviews {
         max-width: 332px;
     }
@@ -90,7 +90,7 @@
     gap: 8px;
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1440px) {
     .div-reviews {
        max-width: 284px;
     }
@@ -205,7 +205,7 @@
 }
 
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1440px) {
     .swiper-reviews {
         max-width: 1386px;
     }
@@ -220,6 +220,7 @@
 
 
 .swiper-reviews .swiper-slide {
+    display: block !important;
     box-sizing: border-box; /* Враховуємо відступи в розмірах */
     width: 100% !important; /* Важливо */
     max-width: 344px;
@@ -234,7 +235,7 @@
 }
 
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1440px) {
     .swiper-reviews .swiper-slide {
        max-width: 332px
     }
