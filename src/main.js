@@ -16,22 +16,24 @@ import { init } from './js/reviews.js';
 import {
   showSuccessModalWork,
   initModalHandlersWork,
+  initEmailValidationWork,
 } from './js/work-together.js';
-
 // Один DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   AccordionFaq();
   initSwiper();
   init();
-
-  // Work Together form logic
+  initEmailValidationWork();
   initModalHandlersWork();
 
   const form = document.getElementById('contact-form-work');
   if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
+
+      const emailInput = document.getElementById('email-input-work');
+      if (!emailInput.checkValidity()) return;
 
       setTimeout(() => {
         showSuccessModalWork();

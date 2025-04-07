@@ -24,3 +24,19 @@ export function initModalHandlersWork() {
     if (e.key === 'Escape') closeModalWork();
   });
 }
+export function initEmailValidationWork() {
+  const emailInput = document.getElementById('email-input-work');
+  const errorMsg = document.getElementById('email-error-work');
+
+  if (!emailInput || !errorMsg) return;
+
+  emailInput.addEventListener('input', () => {
+    if (emailInput.validity.valid) {
+      emailInput.classList.remove('invalid');
+      errorMsg.style.display = 'none';
+    } else {
+      emailInput.classList.add('invalid');
+      errorMsg.style.display = 'block';
+    }
+  });
+}
