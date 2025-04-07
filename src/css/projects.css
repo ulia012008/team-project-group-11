@@ -11,13 +11,13 @@
     margin-bottom: 32px;
 }
 
-.swiper {
+.projects-swiper {
     width: 100%;
     margin-bottom: 32px;
 }
 
 
-.swiper-slide {
+.projects-swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,14 +31,14 @@
     padding: 32px;
 }
 
-.tags {
+.projects-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     margin-bottom: 96px;
 }
 
-.tag {
+.projects-tag {
     padding: 13px 18px;
     border: 1px solid rgba(28, 29, 32, 0.2);
     border-radius: 60px;
@@ -81,7 +81,7 @@
     width: 100%;
 }
 
-.swiper-buttons {
+.projects-swiper-buttons {
     position: relative;
     display: flex;
     justify-content: center;
@@ -89,7 +89,7 @@
     position: relative;
 }
 
-.swiping-arrow-btn {
+.projects-swiping-arrow-btn {
     background-color: transparent;
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
@@ -99,19 +99,19 @@
     align-items: center;
 }
 
-.swiping-arrow-btn:disabled {
+.projects-swiping-arrow-btn:disabled {
     border-color: rgba(250, 250, 250, 0.2);
 }
 
-.disabled-arrow {
+.projects-disabled-arrow {
 --color1: rgba(250, 250, 250, 0.2);
 }
 
-.swiping-left-arrow {
-    rotate: 180deg;
+.projects-swiping-left-arrow {
+    transform: rotate(180deg);
 }
 
-.swiping-arrow-icon {
+.projects-swiping-arrow-icon {
     width: 24px;
     height: 24px;
 }
@@ -131,16 +131,18 @@
         padding: 120px 45px;
     }
 
-        .swiping-arrow-icon {
-            width: 32px;
-            height: 32px;
-        }
+    .projects-swiping-arrow-icon {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 @media (min-width: 1440px) {
     .projects-card {
         display: flex;
         justify-content: space-between;
+        width: 100%;
+        max-width: 1376px;
     }
 
     .projects-card-content {
@@ -149,17 +151,17 @@
         justify-content: space-between;
     }
 
-    .tags {
+    .projects-tags {
         margin-bottom: 0;
     }
 
     .projects-card-img {
-        padding: 120px 40px;
+        padding: 120px 37px;
         border-bottom-left-radius: 0;
         border-top-right-radius: 24px;
     }
 
     .projects-img {
-        min-width: 624px;
+        max-width: 614px;
     }
 }

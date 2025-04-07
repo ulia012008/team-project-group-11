@@ -3,30 +3,31 @@ import 'swiper/css/bundle';
 
 export function initSwiper() {
 
-    const swiper = new Swiper(".mySwiper", {
+  const projectsSwiper = new Swiper(".projects-my-swiper", {
       slidesPerView: 1,
       spaceBetween: 30,
       navigation: {
-        nextEl: ".swiping-right-arrow",
-        prevEl: ".swiping-left-arrow",
+        nextEl: ".projects-swiping-right-arrow",
+        prevEl: ".projects-swiping-left-arrow",
       },
       loop: false,
-  on: {
-      init(swiper) {
-        updateArrowClasses(swiper);
+      on: {
+    
+      init(projectsSwiper) {
+        updateArrowClasses(projectsSwiper);
       },
-      slideChange(swiper) {
-        updateArrowClasses(swiper);
+      slideChange(projectsSwiper) {
+        updateArrowClasses(projectsSwiper);
       }
     }
   });
 
-  function updateArrowClasses(swiper) {
-    const prevBtn = document.querySelector(".swiping-left-arrow");
-    const nextBtn = document.querySelector(".swiping-right-arrow");
+  function updateArrowClasses(projectsSwiper) {
+    const prevBtn = document.querySelector(".projects-swiping-left-arrow");
+    const nextBtn = document.querySelector(".projects-swiping-right-arrow");
 
-    prevBtn?.classList.toggle("disabled-arrow", swiper.isBeginning);
-    nextBtn?.classList.toggle("disabled-arrow", swiper.isEnd);
+    prevBtn?.classList.toggle("projects-disabled-arrow", projectsSwiper.isBeginning);
+    nextBtn?.classList.toggle("projects-disabled-arrow", projectsSwiper.isEnd);
   }
 
 }
