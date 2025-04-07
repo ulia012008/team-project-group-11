@@ -22,6 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // finish about me Accordion
 
+// projects swiper start
+ import { initSwiper } from './js/projects';
+
+document.addEventListener('DOMContentLoaded', () => {
+  initSwiper();
+});
+// projects swiper end
+
 import './js/covers.js';
 
 import { init } from './js/reviews.js';
@@ -29,3 +37,4 @@ import { init } from './js/reviews.js';
 document.addEventListener('DOMContentLoaded', () => {
   init();
 });
+
