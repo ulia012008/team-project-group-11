@@ -1,15 +1,5 @@
 .benefits-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 32px;
-    margin: 0 auto;
     margin-bottom: 64px;
-}
-.list-cards {
-    margin: 0 auto;
-    width: 344px;
 }
 .icon-benefits {
     border-radius: 10px;
@@ -45,7 +35,7 @@
     margin: 0 auto;
 }
 .title-cards-benefits {
-    width: 296px;
+    width: 100%;
     height: 30px;
     font-family: 'Inter Tight';
     font-style: normal;
@@ -58,10 +48,12 @@
     order: 0;
     align-self: stretch;
     flex-grow: 0;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 .text-content-cards {
-    width: 296px;
-    height: 72px;
+    width: 100%;
+    max-height: 72px;
     font-family: 'Inter Tight';
     font-style: normal;
     font-weight: 500;
@@ -73,6 +65,8 @@
     order: 1;
     align-self: stretch;
     flex-grow: 0;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 .list-item {
     display: flex;
@@ -89,6 +83,7 @@
 }
 .list-item {
      margin-bottom: 20px; 
+     height: auto; /* чтобы карточки могли адаптироваться по содержимому */
 }
 .button-benefits {
     color: rgba(250, 250, 250, 1);
@@ -100,12 +95,30 @@
     align-items: center;
     padding: 18px 36px;
     gap: 10px;
-    width: 187px;
+    max-width: 187px;
     height: 55px;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
     flex: none;
     order: 1;
     flex-grow: 0;
+    transition: all 0.3s ease;
+}
+.button-benefits:hover {
+    background-color: #ED3B44;
+    border-color: #ED3B44;
+    color: #FFFFFF;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .list-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        width: 100%;
+        margin-bottom: 64px;
+    }
+    .list-item  {
+        margin-bottom: 0;
+    }
 }
 

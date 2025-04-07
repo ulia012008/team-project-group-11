@@ -7,8 +7,8 @@ import 'swiper/css';
 import { backendData } from './getting-data-reviews';
 import { renderElements } from './render-function-reviews';
 
-const buttonElemLeft = document.querySelector('.swiper-button-prev');
-const buttonElemRight = document.querySelector('.swiper-button-next');
+const buttonElemLeft = document.querySelector('.reviews-swiper-button-prev');
+const buttonElemRight = document.querySelector('.reviews-swiper-button-next');
 const errorMessage = document.createElement('p');
 
 errorMessage.textContent = 'Not found';
@@ -45,8 +45,8 @@ export async function init() {
         onlyInViewport: true,
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.reviews-swiper-button-next',
+        prevEl: '.reviews-swiper-button-prev',
       },
 
       // адаптивність 
