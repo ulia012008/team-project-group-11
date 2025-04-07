@@ -37,7 +37,9 @@ export async function init() {
     // Ініціалізація Swiper
     swiper = new Swiper('.swiper-reviews', {
       direction: 'horizontal',
-      loop: false,  
+      loop: false,
+      slidesPerGroup: 1,
+      slidesPerGroupSkip: 0,
       watchOverflow: true,
       wrapperClass: 'swiper-wrapper-reviews',
       keyboard: {
@@ -63,6 +65,7 @@ export async function init() {
   },
     });
     
+
     // Початковий стан кнопок
     buttonElemLeft.disabled = true;
     buttonElemLeft.classList.add('disabled'); 
