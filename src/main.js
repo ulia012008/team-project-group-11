@@ -30,9 +30,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // finishswipe
 
-
 import { init } from './js/reviews.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   init();
+});
+
+// work
+import {
+  showSuccessModalWork,
+  initModalHandlersWork,
+} from './js/work-together.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  initModalHandlersWork();
+
+  const form = document.getElementById('contact-form-work');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    setTimeout(() => {
+      showSuccessModalWork();
+      form.reset();
+    }, 500);
+  });
 });
