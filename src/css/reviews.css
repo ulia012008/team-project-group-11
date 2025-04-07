@@ -135,6 +135,7 @@
 
 
 .reviews-icon {
+    stroke: #fafafa;
     width: 24px;
     height: 24px;
 }
@@ -153,45 +154,8 @@
 
 
 
-.reviews-button-icon .swiper-button-prev {
-    transform: scaleX(-1);
-    transform-origin: center;
-}
-
-.reviews-button-icon .swiper-button-prev,
-.reviews-button-icon .swiper-button-next {
-    border: 1px solid rgba(250, 250, 250, 0.5);
-    border-radius: 60px;
-    stroke-width: 2px;
-    stroke: #fafafa;
-    padding: 14px;
-    width: 52px;
-    height: 52px;
-}
-
-@media only screen and (min-width: 768px) {
-    .reviews-button-icon .swiper-button-prev,
-    .reviews-button-icon .swiper-button-next {
-        padding: 18px;
-        width: 68px;
-        height: 68px;
-        }
-}
-
-
-
-.reviews-button-icon .swiper-button-next.disabled,
-.reviews-button-icon .swiper-button-prev.disabled {
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    pointer-events: none;/* Забороняє клік на кнопці */
-    opacity: 0.5;
-    border-radius: 60px;
-
-}
-
-
-
 .swiper-reviews {
+    position: relative;
     overflow: hidden;
     width: 100%; /* адаптивно */
     max-width: 344px; /* ширина одного слайду */
@@ -242,6 +206,53 @@
        max-width: 332px
     }
 }
+
+
+
+/*  */
+/* * Кнопки */
+/*  */
+
+.reviews-button-icon .reviews-swiper-button-prev {
+    transform: scaleX(-1);
+    transform-origin: center;
+}
+
+.reviews-button-icon .reviews-swiper-button-prev,
+.reviews-button-icon .reviews-swiper-button-next {
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+    stroke-width: 2px;
+    padding: 14px;
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .reviews-button-icon .reviews-swiper-button-prev,
+    .reviews-button-icon .reviews-swiper-button-next {
+        padding: 18px;
+        width: 68px;
+        height: 68px;
+    }
+}
+
+
+
+.reviews-button-icon .reviews-swiper-button-next.disabled,
+.reviews-button-icon .reviews-swiper-button-prev.disabled {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    pointer-events: none; /* Забороняє клік на кнопці */
+    opacity: 0.5;
+}
+
+/* ? */
+/* * Swiper styles end*/
+/* ? */
 
 
 /* ! */
