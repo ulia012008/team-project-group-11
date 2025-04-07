@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // projects swiper end
 
-
+import './js/covers.js';
 
 import { init } from './js/reviews.js';
 

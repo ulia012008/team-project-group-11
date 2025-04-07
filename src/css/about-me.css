@@ -8,13 +8,6 @@
     margin-bottom: 16px;
 }
 
-.about-me-text-container img {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 24px;
-
-}
-
 .about-me-text {
     font-weight: 500;
     font-size: 23px;
@@ -25,6 +18,28 @@
     padding: 32px;
 
 }
+
+.about-me-text-container img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+
+
+}
+
+@media only screen and (min-width: 768px) {
+    .about-me-text-container {
+        height: 700px;
+    }
+
+    .about-me-text {
+        font-size: 38px;
+        line-height: 105%;
+        letter-spacing: -0.03em;
+    }
+}
+
+
 
 .about-me-red {
     color: var(--button-text);
@@ -110,17 +125,42 @@
     /* Стрелка вверх */
 }
 
+
 @media only screen and (min-width: 768px) {}
 
-@media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
+    .about-me-content {
+        border-radius: 24px;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        background: var(--cards);
+        margin-bottom: 16px;
+    }
+}
 
 /* навички */
-.skills-swiper-about-me {}
+.swiper-about-me {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.skills-swiper-about-me .swiper-slide {
+    width: 130px !important;
+    /* або конкретна ширина */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .circle-about-me {
@@ -149,6 +189,16 @@
 }
 
 .swiper-button-next-about-me {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 50%;
+    z-index: 10;
+
+    cursor: pointer;
     display: flex;
 }
 
@@ -156,4 +206,10 @@
 
     height: 32px;
     fill: rgba(250, 250, 250, 0.4);
+
+}
+
+.button-swiper-about-me:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
 }

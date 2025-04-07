@@ -20,9 +20,9 @@
   align-items: center;
 }
 .logo-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 80px;
+  height: 80px;
+  border-radius: 18px;
   object-fit: cover;
 }
 .logo-text {
@@ -47,15 +47,18 @@
   text-decoration: underline;
 }
 .btn {
-  background-color: #f33;
-  padding: 10px 20px;
-  border-radius: 999px;
+  background-color: #ed3b44;
+  padding: 18px 24px;
+  border-radius: 60px;
   color: #fff;
-  font-weight: 600;
-  transition: 0.3s;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  width: 163px;
+  height: 55px;
 }
 .btn:hover {
-  background-color: #d22;
+  background-color: #e0373f;
 }
 .burger,
 .close {
