@@ -4,7 +4,12 @@ import '@fontsource/inter-tight/600.css';
 import '@fontsource/inter-tight/700.css';
 import '@fontsource/inter-tight/800.css';
 import '@fontsource/inter-tight/900.css';
+import sprite from './img/icons.svg?raw';
 
+const div = document.createElement('div');
+div.style.display = 'none';
+div.innerHTML = sprite;
+document.body.prepend(div);
 // зайві потім приберем
 
 import { initAccordion } from './js/about-me-acc';
