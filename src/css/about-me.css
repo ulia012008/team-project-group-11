@@ -215,14 +215,14 @@
     }
 
     /* Навички - слайдер */
-    .skills-swiper-about-me .swiper-slide {
-        width: 200px !important;
-    }
+    .skills-swiper-about-me .swiper-slide {}
 
     .circle-about-me {
-        width: 200px;
+        flex-shrink: 0;
+        width: 200px !important;
         height: 200px;
-
+        padding: 0;
+        margin: 0;
         font-size: 20px;
     }
 
