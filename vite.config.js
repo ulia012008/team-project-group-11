@@ -13,6 +13,7 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
+        external: ['fsevents'], // 👈 Додано сюди
         input: glob.sync('./src/*.html'),
         output: {
           manualChunks(id) {
