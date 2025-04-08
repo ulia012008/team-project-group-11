@@ -8,6 +8,7 @@
 }
 
 body {
+  font-family: "Inter Tight", sans-serif;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -28,7 +29,6 @@ main:has(.back-link) {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);

@@ -17,7 +17,7 @@ export function initAccordion() {
           const arrow = icon.querySelector('.arrow-about-me');
           if (arrow) {
             console.log('Arrow found:', arrow);
-            arrow.style.transform = 'rotate(0deg)';
+            arrow.style.transform = 'rotate(180deg)';
           }
         }
       });
@@ -27,12 +27,20 @@ export function initAccordion() {
         const icon = button.querySelector('.toggle-icon-about-me');
 
         if (icon) {
-          const arrow = icon.querySelector('.arrow-about-about-me');
+          const arrow = icon.querySelector('.arrow-about-me');
           if (arrow) {
-            arrow.style.transform = 'rotate(180deg)';
+            arrow.style.transform = 'rotate(0deg)';
           }
         }
       }
     });
   });
 }
+import imgAboutMeUrl from '../img/about-me/my-photo.png';
+
+const img = document.createElement('img');
+img.src = imgAboutMeUrl;
+img.alt = 'my-photo';
+img.width = 680;
+
+document.body.appendChild(img);
