@@ -59,7 +59,7 @@ export async function init() {
     768: {
       slidesPerView: 2,
     },
-    1400: {
+    1440: {
       slidesPerView: 4,
     },
   },

@@ -1,5 +1,6 @@
 {
   "name": "team-project-group-11",
+  "homepage": "https://ulia012008.github.io/team-project-group-11",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -7,7 +8,6 @@
     "dev": "vite --open",
     "build": "vite build --base=/team-project-group-11/",
     "preview": "vite preview"
-    
   },
   "devDependencies": {
     "fast-glob": "^3.3.3",
@@ -25,6 +25,7 @@
     "accordion-js": "^3.4.0",
     "axios": "^1.8.4",
     "granim": "^2.0.0",
+    "modern-normalize": "^3.0.1",
     "simplelightbox": "^2.14.3",
     "swiper": "^11.2.6",
     "vite-plugin-full-reload": "^1.2.0",

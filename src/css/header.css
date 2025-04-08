@@ -31,6 +31,7 @@
 }
 
 .logo-text {
+  text-align: center;
   margin-left: 8px;
   font-size: 20px;
   font-weight: 600;
@@ -111,7 +112,7 @@
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 765px) {
   .menu-btn {
     display: block;
   }
@@ -133,6 +134,9 @@
   }
 
   .btn {
+    display: none;
+  }
+  .menu-btn {
     display: none;
   }
 }

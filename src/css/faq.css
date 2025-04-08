@@ -1,15 +1,16 @@
 .faq-section {
   min-width: 320px;
   max-width: 343px;
+  margin-bottom: 64px;
 }
 @media only screen and (min-width: 768px) {
   .faq-section {
-    max-width: 704px;
+    margin-bottom: 96px;
   }
 }
 @media only screen and (min-width: 1440px) {
   .faq-section {
-    max-width: 1376px;
+    margin-bottom: 164px;
   }
 }
 .faq-title {
@@ -108,10 +109,10 @@
   margin-left: auto;
 }
 .open-arrow-icon {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 .open-arrow-icon.rotated {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
 
