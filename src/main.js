@@ -42,16 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-}
+  buttonElemLeft.addEventListener('click', () => swiper.slidePrev());
+  buttonElemRight.addEventListener('click', () => swiper.slideNext());
 
-buttonElemLeft.addEventListener('click', () => swiper.slidePrev());
-buttonElemRight.addEventListener('click', () => swiper.slideNext());
-
-init();
-
-// finish reviews
-
-import './js/header.js';
-
+  init(); // finish reviews
 });
-
