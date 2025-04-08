@@ -126,6 +126,7 @@
 
 
 /* навички */
+
 .swiper-about-me {
     position: relative;
     overflow: hidden;
@@ -133,20 +134,14 @@
 }
 
 .skills-swiper-about-me .swiper-slide {
-    width: 130px !important;
-    /* або конкретна ширина */
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
+
+
 
 .circle-about-me {
     width: 130px;
@@ -227,7 +222,7 @@
     .circle-about-me {
         width: 200px;
         height: 200px;
-        border-radius: 50%;
+
         font-size: 20px;
     }
 

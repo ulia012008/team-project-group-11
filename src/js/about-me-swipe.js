@@ -4,7 +4,7 @@ import 'swiper/css';
 export function initSkillsSliderAbout() {
   const swiperAbout = new Swiper('.skills-swiper-about-me', {
     slidesPerView: 3,
-    spaceBetween: 20,
+    spaceBetween: 0,
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next-about-me',
@@ -13,21 +13,23 @@ export function initSkillsSliderAbout() {
       768: {
         slidesPerView: 4,
       },
-      1024: {
+      1440: {
         slidesPerView: 6,
       },
     },
   });
 
   swiperAbout.on('init', () => {
-    setTimeout(() => updateActiveCircleAbout(swiperAbout), 0);
+    setTimeout(() => {
+      updateActiveCircleAbout(swiperAbout);
+      swiperAbout.slideTo(0, 0);
+    }, 10);
   });
 
   swiperAbout.on('slideChange', () => {
     updateActiveCircleAbout(swiperAbout);
   });
 
-  // 👉 Ручне перемикання при натисканні на іконку SVG
   const nextIconAbout = document.querySelector('.swiper-button-next-about-me');
   if (nextIconAbout) {
     nextIconAbout.addEventListener('click', e => {
