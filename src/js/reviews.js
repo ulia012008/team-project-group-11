@@ -38,8 +38,8 @@ export async function init() {
     swiper = new Swiper('.swiper-reviews', {
       direction: 'horizontal',
       loop: false,
-      slidesPerGroup: 1,
-      slidesPerGroupSkip: 0,
+      slidesPerView: 1,  // кількість видимих слайдів
+      slidesPerGroup: 1,  // кількість слайдів, які перелистуються за раз
       watchOverflow: true,
       wrapperClass: 'swiper-wrapper-reviews',
       keyboard: {
@@ -59,7 +59,7 @@ export async function init() {
     768: {
       slidesPerView: 2,
     },
-    1400: {
+    1440: {
       slidesPerView: 4,
     },
   },
