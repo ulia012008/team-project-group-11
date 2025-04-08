@@ -2,7 +2,7 @@
   min-width: 320px;
   max-width: 343px;
 }
-*/ .faq-title {
+.faq-title {
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
