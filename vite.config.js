@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
-import svgSprite from 'vite-plugin-svg-sprite';
+// import svgSprite from 'vite-plugin-svg-sprite';
 import SortCss from 'postcss-sort-media-queries';
 import glob from 'fast-glob';
 
