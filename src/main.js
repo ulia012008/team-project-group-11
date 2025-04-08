@@ -4,16 +4,7 @@ import '@fontsource/inter-tight/600.css';
 import '@fontsource/inter-tight/700.css';
 import '@fontsource/inter-tight/800.css';
 import '@fontsource/inter-tight/900.css';
-import { defineConfig } from 'vite';
-import svgSprite from 'vite-plugin-svg-sprite';
 
-export default defineConfig({
-  plugins: [
-    svgSprite({
-      include: 'src/img/svg/**/*.svg',
-    }),
-  ],
-});
 // зайві потім приберем
 
 import { initAccordion } from './js/about-me-acc';

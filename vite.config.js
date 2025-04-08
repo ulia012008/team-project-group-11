@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
-import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
+import svgSprite from 'vite-plugin-svg-sprite';
 import SortCss from 'postcss-sort-media-queries';
+import glob from 'fast-glob';
 
 export default defineConfig(({ command }) => {
   return {
@@ -13,7 +14,7 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
-        external: ['fsevents'], // 👈 Додано сюди
+        external: ['fsevents'],
         input: glob.sync('./src/*.html'),
         output: {
           manualChunks(id) {
@@ -38,12 +39,23 @@ export default defineConfig(({ command }) => {
       outDir: '../dist',
       emptyOutDir: true,
     },
+    css: {
+      postcss: {
+        plugins: [SortCss({ sort: 'mobile-first' })],
+      },
+    },
     plugins: [
       injectHTML(),
-      FullReload(['./src/**/**.html']),
-      SortCss({
-        sort: 'mobile-first',
+      FullReload(['./src/**/*.html']),
+      svgSprite({
+        include: 'src/img/svg/**/*.svg',
       }),
     ],
+    optimizeDeps: {
+      exclude: ['vite-plugin-svg-sprite', 'rollup'],
+    },
+    ssr: {
+      noExternal: ['vite-plugin-svg-sprite', 'rollup'],
+    },
   };
 });
