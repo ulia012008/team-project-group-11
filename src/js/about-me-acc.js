@@ -36,11 +36,11 @@ export function initAccordion() {
     });
   });
 }
-import imgAboutMeUrl from '../img/about-me/my-photo.png';
+// import imgAboutMeUrl from '../img/about-me/my-photo.png';
 
-const img = document.createElement('img');
-img.src = imgAboutMeUrl;
-img.alt = 'my-photo';
-img.width = 680;
+// const img = document.createElement('img');
+// img.src = imgAboutMeUrl;
+// img.alt = 'my-photo';
+// img.width = 680;
 
-document.body.appendChild(img);
+// document.body.appendChild(img);
