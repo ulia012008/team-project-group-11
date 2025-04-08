@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 
 export function initSkillsSliderAbout() {
-  const swiper = new Swiper('.skills-swiper-about-me', {
+  const swiperAbout = new Swiper('.skills-swiper-about-me', {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
@@ -19,46 +19,42 @@ export function initSkillsSliderAbout() {
     },
   });
 
-  // ✅ Події — після створення swiper
-  swiper.on('init', () => {
-    setTimeout(() => updateActiveCircleAbout(swiper), 0);
+  swiperAbout.on('init', () => {
+    setTimeout(() => updateActiveCircleAbout(swiperAbout), 0);
   });
 
-  swiper.on('slideChange', () => {
-    updateActiveCircleAbout(swiper);
+  swiperAbout.on('slideChange', () => {
+    updateActiveCircleAbout(swiperAbout);
   });
 
   // 👉 Ручне перемикання при натисканні на іконку SVG
-  const nextIcon = document.querySelector('.button-swiper-about-me');
-  if (nextIcon) {
-    nextIcon.addEventListener('click', e => {
+  const nextIconAbout = document.querySelector('.swiper-button-next-about-me');
+  if (nextIconAbout) {
+    nextIconAbout.addEventListener('click', e => {
       e.stopPropagation();
-      swiper.slideNext();
+      swiperAbout.slideNext();
     });
   }
-
-  // 🔁 Вручну запускаємо init-подію (Swiper її не тригерить автоматично!)
-  swiper.init();
 }
 
-// 🔧 Функція: активний кружечок + зробити його першим
-function updateActiveCircleAbout(swiper) {
-  const circles = document.querySelectorAll('.swiper-slide .circle-about-me');
-  circles.forEach(circle => {
-    circle.classList.remove('red-about-me');
-    circle.classList.add('outline-about-me');
+function updateActiveCircleAbout(swiperAbout) {
+  const circlesAbout = document.querySelectorAll(
+    '.swiper-slide .circle-about-me'
+  );
+  circlesAbout.forEach(circleAbout => {
+    circleAbout.classList.remove('red-about-me');
+    circleAbout.classList.add('outline-about-me');
   });
 
-  const activeSlide = document.querySelector(
+  const activeSlideAbout = document.querySelector(
     '.swiper-slide-active .circle-about-me'
   );
-  if (activeSlide) {
-    activeSlide.classList.remove('outline-about-me');
-    activeSlide.classList.add('red-about-me');
+  if (activeSlideAbout) {
+    activeSlideAbout.classList.remove('outline-about-me');
+    activeSlideAbout.classList.add('red-about-me');
   }
 
-  // ⬅️ Зробити активний слайд першим
   setTimeout(() => {
-    swiper.slideToLoop(swiper.realIndex, 0); // без анімації
+    swiperAbout.slideToLoop(swiperAbout.realIndex, 0);
   }, 10);
 }

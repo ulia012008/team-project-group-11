@@ -205,8 +205,6 @@
         width: 100%;
         object-fit: cover;
         border-radius: 24px;
-
-
     }
 
     .about-me-text {
@@ -218,9 +216,7 @@
     .open-arrow-about-me {
         width: 40px;
         height: 40px;
-
         transition: transform 0.3s ease;
-
     }
 
     /* Навички - слайдер */
@@ -239,8 +235,6 @@
         height: 72px;
     }
 
-
-
     .swiper-button-next-about-me .button-swiper-about-me {
         width: 40px;
         height: 40px;
@@ -251,6 +245,7 @@
     .about-me-content {
         display: flex;
         flex-direction: row;
+        gap: 16px;
         margin-bottom: 96px;
     }
 
