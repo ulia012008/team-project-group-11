@@ -6,7 +6,7 @@ import '@fontsource/inter-tight/800.css';
 import '@fontsource/inter-tight/900.css';
 
 // зайві потім приберем
-// import { initHeader } from './js/header.js';
+import { initHeader } from './js/header.js';
 import { initAccordion } from './js/about-me-acc';
 import { initSkillsSliderAbout } from './js/about-me-swipe.js';
 import { AccordionFaq } from './js/faq.js';
@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // const buttonElemLeft = document.getElementById('btn-left');
-  // const buttonElemRight = document.getElementById('btn-right');
+  const buttonElemLeft = document.getElementById('btn-left');
+  const buttonElemRight = document.getElementById('btn-right');
 
-  // initHeader(buttonElemLeft, buttonElemRight);
+  initHeader(buttonElemLeft, buttonElemRight);
 });
