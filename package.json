@@ -7,7 +7,6 @@
     "dev": "vite --open",
     "build": "vite build --base=/team-project-group-11/",
     "preview": "vite preview"
-    
   },
   "devDependencies": {
     "fast-glob": "^3.3.3",

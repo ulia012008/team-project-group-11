@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+export function initHeader() {
   const menuBtn = document.getElementById('menu-btn');
   const nav = document.getElementById('nav');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Закриття меню по кліку на пункт навігації та плавний скрол
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
-      e.preventDefault(); // Відміняємо стандартну поведінку
+      e.preventDefault();
 
       const targetId = link.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
@@ -37,4 +37,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     nav.classList.remove('open');
   });
-});
+}
