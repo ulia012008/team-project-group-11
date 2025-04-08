@@ -10,6 +10,12 @@ export function initSwiper() {
         prevEl: ".projects-swiping-left-arrow",
       },
       loop: false,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      mousewheel: true,
+      touchEventsTarget: '.swiper',
       on: {
         init(swiper) {
           updateArrowClasses(swiper);
