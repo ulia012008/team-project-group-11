@@ -48,7 +48,7 @@ export default defineConfig(({ command }) => {
       injectHTML(),
       FullReload(['./src/**/*.html']),
       svgSprite({
-        include: 'src/img/svg/**/*.svg',
+        include: 'src/img/**/*.svg',
       }),
     ],
     optimizeDeps: {
