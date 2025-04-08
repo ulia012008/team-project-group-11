@@ -41,4 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500);
     });
   }
+
+}
+
+buttonElemLeft.addEventListener('click', () => swiper.slidePrev());
+buttonElemRight.addEventListener('click', () => swiper.slideNext());
+
+init();
+
+// finish reviews
+
+import './js/header.js';
+
 });
+
