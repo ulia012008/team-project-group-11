@@ -1,3 +1,8 @@
+.about-me-section {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
 .about-me-text-container {
     border-radius: 24px;
     height: 500px;
@@ -6,6 +11,7 @@
     gap: 20px;
     background: var(--cards);
     margin-bottom: 16px;
+
 }
 
 .about-me-text {
@@ -16,6 +22,7 @@
     text-transform: uppercase;
     color: var(--main-text);
     padding: 32px;
+
 
 }
 
@@ -32,10 +39,44 @@
         height: 700px;
     }
 
+    .about-me-text-container img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+
+
+    }
+
     .about-me-text {
         font-size: 38px;
         line-height: 105%;
         letter-spacing: -0.03em;
+    }
+
+    .open-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Навички - слайдер */
+    .skills-swiper-about-me .swiper-slide {
+        width: 200px !important;
+    }
+
+    .circle-about-me {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        font-size: 20px;
+    }
+
+
+
+
+
+    .swiper-button-next-about-me .button-swiper-about-me {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -105,7 +146,6 @@
     line-height: 150%;
     letter-spacing: -0.02em;
     color: var(--main-text);
-
     padding-bottom: 20px;
     height: 100%;
 }
