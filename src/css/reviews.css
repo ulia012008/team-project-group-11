@@ -42,7 +42,7 @@
 
 @media only screen and (min-width: 768px) {
     .list-reviews {
-        display: block;
+        display: flex;
         gap: 16px;
         padding: 0;
         margin: 0;
@@ -57,7 +57,7 @@
     width: 100%;
     max-width: 344px;
     height: auto;
-  
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -83,7 +83,7 @@
 }
 
 .div-reviews {
-    width: 100%; 
+    width: 100%;
     max-width: 296px;
     display: flex;
     flex-direction: column;
@@ -92,7 +92,7 @@
 
 @media only screen and (min-width: 1440px) {
     .div-reviews {
-       max-width: 284px;
+        max-width: 284px;
     }
 }
 
@@ -129,7 +129,7 @@
     justify-content: center;
     margin-top: 32px;
     gap: 20px;
-    
+
 }
 
 
@@ -157,10 +157,12 @@
 .swiper-reviews {
     position: relative;
     overflow: hidden;
-    width: 100%; /* адаптивно */
-    max-width: 344px; /* ширина одного слайду */
+    width: 100%;
+    /* адаптивно */
+    max-width: 344px;
+    /* ширина одного слайду */
     margin: 0 auto;
-    
+
 }
 
 
@@ -179,7 +181,8 @@
 
 
 .swiper-wrapper-reviews {
-    display: flex; /* Розміщуємо слайди горизонтально */
+    display: flex;
+    /* Розміщуємо слайди горизонтально */
 
 }
 
@@ -187,11 +190,14 @@
 
 .swiper-reviews .swiper-slide {
     display: block !important;
-    box-sizing: border-box; /* Враховуємо відступи в розмірах */
-    width: 100% !important; /* Важливо */
+    box-sizing: border-box;
+    /* Враховуємо відступи в розмірах */
+    width: 100% !important;
+    /* Важливо */
     max-width: 344px;
     height: auto !important;
-    flex-shrink: 0; /* Щоб не стискалося */
+    flex-shrink: 0;
+    /* Щоб не стискалося */
 }
 
 @media only screen and (min-width: 768px) {
@@ -203,7 +209,7 @@
 
 @media only screen and (min-width: 1440px) {
     .swiper-reviews .swiper-slide {
-       max-width: 332px
+        max-width: 332px
     }
 }
 
@@ -246,7 +252,8 @@
 .reviews-button-icon .reviews-swiper-button-next.disabled,
 .reviews-button-icon .reviews-swiper-button-prev.disabled {
     border: 1px solid rgba(250, 250, 250, 0.2);
-    pointer-events: none; /* Забороняє клік на кнопці */
+    pointer-events: none;
+    /* Забороняє клік на кнопці */
     opacity: 0.5;
 }
 
