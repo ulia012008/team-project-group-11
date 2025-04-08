@@ -94,3 +94,5 @@ buttonElemRight.addEventListener('click', () => swiper.slideNext());
 init();
 
 // finish reviews
+
+import './js/header.js';
