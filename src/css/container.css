@@ -1,7 +1,14 @@
+section {
+  padding-top: 64px;
+  /* верхній відступ */
+  padding-bottom: 64px;
+  /* нижній відступ */
+}
+
 .container {
-
-  width: 100%;
-
+  min-width: 320px;
+  /* width: 100%; */
+  max-width: 375px;
   margin: 0 auto;
   padding: 0 16px;
   box-sizing: border-box;
@@ -13,13 +20,19 @@
 /* Стилі для планшетів (від 768px) */
 @media only screen and (min-width: 768px) {
   .container {
-    min-width: 768px;
+    max-width: 768px;
     padding: 0 32px;
   }
 }
 
 /* Стилі для десктопів (від 1440px) */
 @media only screen and (min-width: 1440px) {
+  section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+  }
+
   .container {
     max-width: 1440px;
 
