@@ -5,9 +5,9 @@ import '@fontsource/inter-tight/700.css';
 import '@fontsource/inter-tight/800.css';
 import '@fontsource/inter-tight/900.css';
 
-import { initHeader } from './js/header.js';
-import { AccordionAbout } from './js/about-me-acc';
-import { initSkillsSliderAbout } from './js/about-me-swipe.js';
+// зайві потім приберем
+
+import { initAccordion } from './js/about-me-acc';
 import { AccordionFaq } from './js/faq.js';
 import { initSwiper } from './js/projects';
 import './js/covers.js';
@@ -20,8 +20,7 @@ import {
 } from './js/work-together.js';
 // Один DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
-  AccordionAbout();
-  initSkillsSliderAbout();
+  initAccordion();
   AccordionFaq();
   initSwiper();
   init();
@@ -43,12 +42,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
   
-
-  const buttonElemLeft = document.getElementById('btn-left');
-  const buttonElemRight = document.getElementById('btn-right');
-
-  initHeader(buttonElemLeft, buttonElemRight);
-
 });
