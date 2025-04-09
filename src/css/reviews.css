@@ -1,17 +1,23 @@
 .reviews {
-    padding: 64px 16px;
+    margin-top: 64px;
+    margin-bottom: 64px;
 }
 
 @media screen and (min-width: 768px) {
     .reviews {
-        padding: 96px 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-top: 96px;
+        margin-bottom: 96px;
     }
 }
 
 
 @media only screen and (min-width: 1440px) {
     .reviews {
-        padding: 165px 25px;
+        padding-left: 25px;
+        margin-top: 165px;
+        margin-bottom: 165px;
     }
 }
 

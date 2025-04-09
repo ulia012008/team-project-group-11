@@ -43,8 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  
+
   const buttonElemLeft = document.getElementById('btn-left');
   const buttonElemRight = document.getElementById('btn-right');
 
   initHeader(buttonElemLeft, buttonElemRight);
+
 });
