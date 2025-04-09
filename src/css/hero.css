@@ -1,5 +1,7 @@
 #hero {
   background-image: url('../img/hero.png');
+  background-position: center;
+  background-size: cover;
 }
 
 .hero_title {
@@ -44,16 +46,13 @@
 }
 
 .socials_link {
-  font-weight: 500;
   font-size: 14px;
-  letter-spacing: -0.02em;
   color: #fafafa;
 }
 
 @media (min-width: 768px) {
   .hero_title {
     margin-top: 188px;
-    padding-right: 104px;
     text-align: left;
     font-size: 90px;
     width: auto;
@@ -64,7 +63,22 @@
     margin-top: 150px;
     margin-bottom: 80px;
     width: auto;
-    justify-content: center;
+    justify-content: right;
+  }
+
+  .socials_item {
+    width: 55px;
+    height: 55px;
+  }
+
+  .socials_item_mail {
+    width: 223px;
+    height: 55px;
+    padding-left: 24px;
+  }
+
+  .socials_link {
+    font-size: 16px;
   }
 
   .hero_content {
@@ -76,7 +90,7 @@
   .hero_title {
     width: 1084px;
     font-size: 90px;
-    margin-left: 178px;
+    margin-left: 124px;
   }
 
   .socials {

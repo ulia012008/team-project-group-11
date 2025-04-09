@@ -31,17 +31,24 @@
 
 .scroll-row li {
     flex: 0 0 auto;
-    width: 300px;
-    height: 200px;
+    width: 282px;
+    height: 163px;
     overflow: hidden;
 
+}
+
+@media only screen and (min-width: 768px) {
+    .scroll-row li {
+            width: 544px;
+            height: 314px;    
+        }
 }
 
 
 .scroll-row img {
     height: 100%;
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
     display: block;
 }
 

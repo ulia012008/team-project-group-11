@@ -1,46 +1,32 @@
-export function initAccordion() {
-  document.querySelectorAll('.ac-trigger-about-me').forEach(button => {
-    button.addEventListener('click', () => {
-      const panel = button.parentElement.nextElementSibling;
-      const isOpen = panel.classList.contains('open');
+import AccordionAboutMe from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
-      console.log('Panel:', panel);
+new AccordionAboutMe('.accordion-container-about-me');
 
-      document.querySelectorAll('.ac-panel-about-me').forEach(acText => {
-        acText.classList.remove('open');
-        const icon = acText.previousElementSibling?.querySelector(
-          '.toggle-icon-about-me'
-        );
+export function AccordionAbout() {
+  const arrowsAbout = document.querySelectorAll('.ac-trigger-about-me');
 
-        if (icon) {
-          console.log('Icon found:', icon);
-          const arrow = icon.querySelector('.arrow-about-me');
-          if (arrow) {
-            console.log('Arrow found:', arrow);
-            arrow.style.transform = 'rotate(180deg)';
-          }
+  arrowsAbout.forEach(arrow => {
+    arrow.addEventListener('click', () => {
+      const panelAbout = arrow.parentElement.nextElementSibling;
+      panelAbout.classList.toggle('open');
+
+      const svgAbout = arrow.querySelector('.open-arrow-about-me');
+      setTimeout(() => {
+        if (panelAbout.classList.contains('open')) {
+          svgAbout.style.transform = 'rotate(0deg)';
+        } else {
+          svgAbout.style.transform = 'rotate(180deg)';
         }
-      });
-
-      if (!isOpen) {
-        panel.classList.add('open');
-        const icon = button.querySelector('.toggle-icon-about-me');
-
-        if (icon) {
-          const arrow = icon.querySelector('.arrow-about-me');
-          if (arrow) {
-            arrow.style.transform = 'rotate(0deg)';
-          }
-        }
-      }
+      }, 0);
     });
   });
 }
-import imgAboutMeUrl from '../img/about-me/my-photo.png';
+// import imgAboutMeUrl from '../img/about-me/my-photo.png';
 
-const img = document.createElement('img');
-img.src = imgAboutMeUrl;
-img.alt = 'my-photo';
-img.width = 680;
+// const img = document.createElement('img');
+// img.src = imgAboutMeUrl;
+// img.alt = 'my-photo';
+// img.width = 680;
 
-document.body.appendChild(img);
+// document.body.appendChild(img);
