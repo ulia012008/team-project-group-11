@@ -42,8 +42,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  buttonElemLeft.addEventListener('click', () => swiper.slidePrev());
-  buttonElemRight.addEventListener('click', () => swiper.slideNext());
-
-  init(); // finish reviews
+  
 });
