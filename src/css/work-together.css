@@ -78,7 +78,7 @@ flex-direction: row;
 }
 
 .input-work,
-.textarea-work {
+.input-work-comments {
     background: transparent;
     border: none;
     border-bottom: 1px solid rgba(250, 250, 250, 0.4);
@@ -91,12 +91,17 @@ flex-direction: row;
     height: 44px;
     text-align: start;
     resize: none;
+    overflow: hidden;
+    white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+      
 }
-
 
 @media only screen and (min-width: 1440px){
     .input-work,
-        .textarea-work{
+        .input-work-comments{
             width: 390px;
         }
 }
@@ -104,7 +109,7 @@ flex-direction: row;
 
 
 .input-work::placeholder,
-.textarea-work::placeholder{
+.input-work-comments::placeholder{
 color: rgba(250, 250, 250, 0.6);
 }
 
@@ -118,7 +123,7 @@ input:invalid:focus {
 }
 
 .input-work:focus,
-.textarea-work:focus {
+.input-work-comments:focus {
     outline: none;
     box-shadow: none;
 }

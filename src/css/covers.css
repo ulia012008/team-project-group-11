@@ -1,22 +1,22 @@
 .covers {
     background-image: url(../img/covers/elements_vectors.png);
-    padding: 50px 0px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 60px;
 }
 
+
+
 .rotated-row {
-       transform: rotate(10deg);
+    transform: rotate(-8deg);
 }
 
 .row-left {
-    transform: rotate(-10deg);
+    transform: rotate(-8deg);
 }
 
 .row-right {
-    transform: rotate(-10deg);
+    transform: rotate(-8deg);
 }
 
 
@@ -24,9 +24,10 @@
     display: flex;
     width: max-content;
     list-style: none;
-    gap: 20px;
+    gap: 25px;
     padding: 0;
     margin: 0;
+    margin-bottom: 25px;
 }
 
 .scroll-row li {
@@ -34,14 +35,13 @@
     width: 282px;
     height: 163px;
     overflow: hidden;
-
 }
 
 @media only screen and (min-width: 768px) {
     .scroll-row li {
-            width: 544px;
-            height: 314px;    
-        }
+        width: 544px;
+        height: 314px;
+    }
 }
 
 
@@ -59,43 +59,42 @@
 }
 
 .start-animation .animate-left {
-    animation: scrollLeft 50s linear infinite;
+    animation: scrollLeft 180s linear infinite;
 }
-
 .start-animation .animate-right {
-    animation: scrollRight 50s linear infinite;
+    animation: scrollRight 180s linear infinite;
 }
 
 .start-animation .animate-left-second {
-    animation: scrollLeftSecond 50s linear infinite;
+    animation: scrollLeftSecond 180s linear infinite;
 }
 
 @keyframes scrollLeft {
     0% {
-        transform: translateX(0);
+        transform: translateX(-33.333%);
     }
 
     100% {
-        transform: translateX(-20%);
+        transform: translateX(-66.666%);
     }
 }
 
 @keyframes scrollRight {
     0% {
-        transform: translateX(-20%);
+        transform: translateX(-66.666%);
     }
 
     100% {
-        transform: translateX(0%);
+        transform: translateX(-33.333%);
     }
 }
 
 @keyframes scrollLeftSecond {
     0% {
-        transform: translateX(0);
+        transform: translateX(-33.333%);
     }
 
     100% {
-        transform: translateX(-20%);
+        transform: translateX(-66.666%);
     }
 }
