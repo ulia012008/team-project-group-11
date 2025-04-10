@@ -1,5 +1,5 @@
-<section class="container contact-section-work" id="work-together">
-  <section class="container contact-section-work" id="work-together">
+<section id="work-together">
+  <div class="container contact-section-work">
     <div class="work-heading">
       <img src="./img/logo/logo.png" alt="Avatar" class="avatar" />
       <h2 class="line-one">LET’S <span>WORK</span></h2>
@@ -9,37 +9,20 @@
     <form class="form-work" id="contact-form-work">
       <div class="form-fields">
         <div class="input-wrapper">
-          <input
-            class="input-work"
-            id="email-input-work"
-            type="email"
-            name="email"
-            placeholder="clients@gmail.com"
-            required
-            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-          />
-          <span class="error-msg" id="email-error-work"
-            >Invalid email, try again</span
-          >
+          <input class="input-work" id="email-input-work" type="email" name="email" placeholder="clients@gmail.com"
+            required pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" />
+          <span class="error-msg" id="email-error-work">Invalid email, try again</span>
         </div>
-        <textarea
-          class="textarea-work"
-          name="comments"
-          placeholder="comments"
-          required
-        ></textarea>
+        <input class="input-work-comments" type="text" name="comments" placeholder="comments" required />
       </div>
       <button type="submit" class="send-btn-work">Send</button>
     </form>
     <!-- Modal -->
-    <div class="modal-backdrop-work is-hidden" id="success-modal-work">
+    <div class="modal-backdrop-work is-hidden-work" id="success-modal-work" role="dialog" aria-modal="true"
+      aria-labelledby="modal-title-work">
       <div class="modal-content-work">
-        <button class="modal-close-work" id="close-modal-btn-work">
-          <svg class="close-work-work" width="22" height="22">
-            <use href="#icon-x"></use>
-          </svg>
-        </button>
-        <h3 class="modal-title-work">
+        <button class="modal-close-work" id="close-modal-btn-work">&times;</button>
+        <h3 class="modal-title-work" id="modal-title-work">
           Thank you for your interest in cooperation!
         </h3>
         <p class="modal-text-work">
@@ -49,12 +32,8 @@
       </div>
     </div>
     <div class="contacts-work">
-      <a href="mailto:lloydjefferson@gmail.com" class="contact-link-work"
-        >lloydjefferson@gmail.com</a
-      >
-      <a href="tel:+380111111111" class="contact-link-work"
-        >+380 11 111 11 11</a
-      >
+      <a href="mailto:lloydjefferson@gmail.com" class="contact-link-work">lloydjefferson@gmail.com</a>
+      <a href="tel:+380111111111" class="contact-link-work">+380 11 111 11 11</a>
     </div>
-  </section>
+  </div>
 </section>
