@@ -204,6 +204,10 @@
     .swiper-about-me {
         gap: 64px;
     }
+        .skills-swiper-about-me .swiper-wrapper {
+            min-width: 600px;
+            /* max-width: 1200px; */
+        }
 
     .about-me-text-container {
         height: 700px;
@@ -255,7 +259,8 @@
     }
 
     .skills-swiper-about-me .swiper-wrapper { 
-        max-width: 1200px;
+        min-width: 1200px;
+        /* max-width: 1200px; */
     }
 
     .about-me-content {
