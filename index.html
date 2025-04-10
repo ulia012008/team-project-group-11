@@ -10,7 +10,7 @@
   <script type="module" crossorigin src="/team-project-group-11/index.js"></script>
   <link rel="modulepreload" crossorigin href="/team-project-group-11/assets/vendor-Bh3l_4O9.js">
   <link rel="stylesheet" crossorigin href="/team-project-group-11/assets/vendor-KHhqx3PX.css">
-  <link rel="stylesheet" crossorigin href="/team-project-group-11/assets/index-Bd8KUtHO.css">
+  <link rel="stylesheet" crossorigin href="/team-project-group-11/assets/index-CGiqpP1o.css">
 </head>
 
 <body> 
@@ -567,19 +567,22 @@
     </li>
   </ul>
 </section>
-  <section class="container covers" id="covers">
-  <h2 class="visually-hidden">Covers</h2>
-  <div class="rotated-row row-left">
-    <ul class="scroll-row animate-left"></ul>
-  </div>
-  <div class="rotated-row row-right">
-    <ul class="scroll-row animate-right"></ul>
-  </div>
-  <div class="rotated-row row-left">
-    <ul class="scroll-row animate-left-second"></ul>
+  <section class="covers" id="covers">
+  <div class="container">
+    <div class="gallery-covers">
+      <h2 class="visually-hidden">Covers</h2>
+      <div class="rotated-row row-left">
+        <ul class="scroll-row animate-left"></ul>
+      </div>
+      <div class="rotated-row row-right">
+        <ul class="scroll-row animate-right"></ul>
+      </div>
+      <div class="rotated-row row-left">
+        <ul class="scroll-row animate-left-second"></ul>
+      </div>
+    </div>
   </div>
 </section>
-
 
   <section class="reviews container" id="reviews">
 
@@ -634,12 +637,13 @@
             >Invalid email, try again</span
           >
         </div>
-        <textarea
-          class="textarea-work"
+        <input
+          class="input-work-comments"
+          type="text"
           name="comments"
           placeholder="comments"
           required
-        ></textarea>
+        />
       </div>
       <button type="submit" class="send-btn-work">Send</button>
     </form>
