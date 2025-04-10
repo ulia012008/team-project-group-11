@@ -71,6 +71,9 @@
   word-wrap: break-word;
   overflow: hidden;
 }
+.list-cards {
+  margin-bottom: 50px;
+}
 .list-item {
   display: flex;
   flex-direction: column;
@@ -104,6 +107,7 @@
   order: 1;
   flex-grow: 0;
   transition: all 0.3s ease;
+  word-wrap: break-word;
 }
 .link-benefits:hover {
   background-color: #ED3B44;
