@@ -46,10 +46,7 @@ export async function init() {
         enabled: true,
         onlyInViewport: true,
       },
-      navigation: {
-        nextEl: '.reviews-swiper-button-next',
-        prevEl: '.reviews-swiper-button-prev',
-      },
+      
 
       // адаптивність 
   breakpoints: {

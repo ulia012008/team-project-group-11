@@ -1,46 +1,37 @@
-export function initAccordion() {
-  document.querySelectorAll('.ac-trigger-about-me').forEach(button => {
-    button.addEventListener('click', () => {
-      const panel = button.parentElement.nextElementSibling;
-      const isOpen = panel.classList.contains('open');
+import AccordionAboutMe from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
+const firstElement = new AccordionAboutMe('.accordion-container-about-me', {
+  duration: 0, // без анимации (можно поставить 300 для плавности)
+  showMultiple: false,
+  openOnInit: [0], // первый элемент открыт по умолчанию
+});
+const triggersAbout = document.querySelectorAll('.ac-trigger-about-me');
+function updateArrows() {
+  triggersAbout.forEach(trigger => {
+    const svg = trigger.querySelector('.open-arrow-about-me');
+    const isOpen = trigger.classList.contains('is-active');
+    svg.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  });
+}
+setTimeout(updateArrows, 10);
 
-      console.log('Panel:', panel);
+export function AccordionAbout() {
+  const arrowsAbout = document.querySelectorAll('.ac-trigger-about-me');
 
-      document.querySelectorAll('.ac-panel-about-me').forEach(acText => {
-        acText.classList.remove('open');
-        const icon = acText.previousElementSibling?.querySelector(
-          '.toggle-icon-about-me'
-        );
+  arrowsAbout.forEach(arrowAbout => {
+    arrowAbout.addEventListener('click', () => {
+      const panelAbout = arrowAbout.parentElement.nextElementSibling;
+      panelAbout.classList.toggle('open');
 
-        if (icon) {
-          console.log('Icon found:', icon);
-          const arrow = icon.querySelector('.open-arrow-about-me');
-          if (arrow) {
-            console.log('Arrow found:', arrow);
-            arrow.style.transform = 'rotate(180deg)';
-          }
+      const svgAbout = arrowAbout.querySelector('.open-arrow-about-me');
+
+      setTimeout(() => {
+        if (panelAbout.classList.contains('open')) {
+          svgAbout.style.transform = 'rotate(0deg)';
+        } else {
+          svgAbout.style.transform = 'rotate(180deg)';
         }
-      });
-
-      if (!isOpen) {
-        panel.classList.add('open');
-        const icon = button.querySelector('.toggle-icon-about-me');
-
-        if (icon) {
-          const arrow = icon.querySelector('.open-arrow-about-me');
-          if (arrow) {
-            arrow.style.transform = 'rotate(0deg)';
-          }
-        }
-      }
+      }, 0);
     });
   });
 }
-// import imgAboutMeUrl from '../img/about-me/my-photo.png';
-
-// const img = document.createElement('img');
-// img.src = imgAboutMeUrl;
-// img.alt = 'my-photo';
-// img.width = 680;
-
-// document.body.appendChild(img);

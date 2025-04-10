@@ -1,23 +1,18 @@
 .reviews {
-    margin-top: 64px;
-    margin-bottom: 64px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 @media screen and (min-width: 768px) {
     .reviews {
-        padding-left: 32px;
-        padding-right: 32px;
-        margin-top: 96px;
-        margin-bottom: 96px;
+        padding: 96px 32px;
     }
 }
 
 
 @media only screen and (min-width: 1440px) {
     .reviews {
-        padding-left: 25px;
-        margin-top: 165px;
-        margin-bottom: 165px;
+        padding: 165px 25px;
     }
 }
 
@@ -174,7 +169,7 @@
 
 @media only screen and (min-width: 768px) {
     .swiper-reviews {
-        max-width: 728px;
+        max-width: 704px;
     }
 }
 
