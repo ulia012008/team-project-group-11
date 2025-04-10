@@ -35,6 +35,7 @@ header {
 .menu-btn {
   display: none;
 }
+
 /* Навігація */
 .nav {
   display: flex;
@@ -87,6 +88,7 @@ header {
   display: block;
   fill: #fbfbfb;
 }
+
 /* Tablet */
 @media (min-width: 768px) {
   .menu-btn {
@@ -100,10 +102,12 @@ header {
     transition: color 0.3s ease;
     display: block;
   }
+
   .menu-btn:hover {
     text-decoration: underline;
     text-decoration-skip-ink: none;
   }
+
   .btn {
     background-color: #ed3b44;
     padding: 18px 24px;
@@ -114,6 +118,7 @@ header {
     letter-spacing: -0.02em;
     display: block;
   }
+
   .icon-header {
     display: none;
   }

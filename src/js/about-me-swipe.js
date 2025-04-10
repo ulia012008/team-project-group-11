@@ -5,7 +5,10 @@ export function initSkillsSliderAbout() {
   const swiperAbout = new Swiper('.skills-swiper-about-me', {
     slidesPerView: 3,
     spaceBetween: 0,
-    loop: true,
+    loop: true, // цикличность
+    // loopAdditionalSlides: 1, //
+    centeredSlides: false, // Отключаем центрирование слайда
+    initialSlide: 0, // Активный слайд — первый
     navigation: {
       nextEl: '.swiper-button-next-about-me',
     },
@@ -19,12 +22,8 @@ export function initSkillsSliderAbout() {
     },
   });
 
-  swiperAbout.on('init', () => {
-    setTimeout(() => {
-      updateActiveCircleAbout(swiperAbout);
-      swiperAbout.slideTo(0, 0);
-    }, 10);
-  });
+  updateActiveCircleAbout(swiperAbout);
+  swiperAbout.slideTo(0, 0);
 
   swiperAbout.on('slideChange', () => {
     updateActiveCircleAbout(swiperAbout);
@@ -55,8 +54,4 @@ function updateActiveCircleAbout(swiperAbout) {
     activeSlideAbout.classList.remove('outline-about-me');
     activeSlideAbout.classList.add('red-about-me');
   }
-
-  setTimeout(() => {
-    swiperAbout.slideToLoop(swiperAbout.realIndex, 0);
-  }, 10);
 }
