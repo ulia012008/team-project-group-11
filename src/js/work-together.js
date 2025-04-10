@@ -1,12 +1,12 @@
 export function showSuccessModalWork() {
   const modal = document.getElementById('success-modal-work');
-  modal.classList.remove('is-hidden');
+  modal.classList.remove('is-hidden-work');
   document.body.classList.add('modal-open-work');
 }
 
 export function closeModalWork() {
   const modal = document.getElementById('success-modal-work');
-  modal.classList.add('is-hidden');
+  modal.classList.add('is-hidden-work');
   document.body.classList.remove('modal-open-work');
 }
 
