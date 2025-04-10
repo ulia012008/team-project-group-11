@@ -10,7 +10,7 @@
   <script type="module" crossorigin src="/team-project-group-11/index.js"></script>
   <link rel="modulepreload" crossorigin href="/team-project-group-11/assets/vendor-Bh3l_4O9.js">
   <link rel="stylesheet" crossorigin href="/team-project-group-11/assets/vendor-KHhqx3PX.css">
-  <link rel="stylesheet" crossorigin href="/team-project-group-11/assets/index-CGiqpP1o.css">
+  <link rel="stylesheet" crossorigin href="/team-project-group-11/assets/index-Bwbl_hpT.css">
 </head>
 
 <body> 
@@ -96,8 +96,7 @@
                         media="(min-width: 768px) and (max-width: 1439px)">
                     <source srcset="/team-project-group-11/assets/my-photo-desk-D0gVwMEn.png 1x, /team-project-group-11/assets/my-photo-desk@2x-nCoYFsto.png 2x"
                         media="(min-width: 1440px)">
-                    <img src="/team-project-group-11/assets/my-photo-desk@2x-nCoYFsto.png" alt="about-me" width="704" height="700"
-                        loading="lazy">
+                    <img src="/team-project-group-11/assets/my-photo-desk@2x-nCoYFsto.png" alt="about-me" width="704" height="700" loading="lazy">
                 </picture>
             </div>
         </div>
@@ -256,7 +255,6 @@
         </div>
     </div>
 </section>
-
   <section class="container benefits-section" id="benefits">
   <h2 class="benefits-title">BENEFITS OF WORKING WITH ME</h2>
   <div class="benefits-wrapper">
@@ -624,38 +622,20 @@
     <form class="form-work" id="contact-form-work">
       <div class="form-fields">
         <div class="input-wrapper">
-          <input
-            class="input-work"
-            id="email-input-work"
-            type="email"
-            name="email"
-            placeholder="clients@gmail.com"
-            required
-            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-          />
-          <span class="error-msg" id="email-error-work"
-            >Invalid email, try again</span
-          >
+          <input class="input-work" id="email-input-work" type="email" name="email" placeholder="clients@gmail.com"
+            required pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" />
+          <span class="error-msg" id="email-error-work">Invalid email, try again</span>
         </div>
-        <input
-          class="input-work-comments"
-          type="text"
-          name="comments"
-          placeholder="comments"
-          required
-        />
+        <textarea class="input-work-comments" name="comments" placeholder="comments" required></textarea>
       </div>
       <button type="submit" class="send-btn-work">Send</button>
     </form>
     <!-- Modal -->
-    <div class="modal-backdrop-work is-hidden" id="success-modal-work">
+    <div class="modal-backdrop-work is-hidden-work" id="success-modal-work" role="dialog" aria-modal="true"
+      aria-labelledby="modal-title-work">
       <div class="modal-content-work">
-        <button class="modal-close-work" id="close-modal-btn-work">
-          <svg class="close-work-work" width="22" height="22">
-            <use href="#icon-x"></use>
-          </svg>
-        </button>
-        <h3 class="modal-title-work">
+        <button class="modal-close-work" id="close-modal-btn-work">&times;</button>
+        <h3 class="modal-title-work" id="modal-title-work">
           Thank you for your interest in cooperation!
         </h3>
         <p class="modal-text-work">
@@ -665,16 +645,11 @@
       </div>
     </div>
     <div class="contacts-work">
-      <a href="mailto:lloydjefferson@gmail.com" class="contact-link-work"
-        >lloydjefferson@gmail.com</a
-      >
-      <a href="tel:+380111111111" class="contact-link-work"
-        >+380 11 111 11 11</a
-      >
+      <a href="mailto:lloydjefferson@gmail.com" class="contact-link-work">lloydjefferson@gmail.com</a>
+      <a href="tel:+380111111111" class="contact-link-work">+380 11 111 11 11</a>
     </div>
   </section>
 </section>
-
 
 
     <!-- Loads the specified .html file -->
