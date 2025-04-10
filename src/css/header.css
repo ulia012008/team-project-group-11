@@ -1,24 +1,21 @@
 /* Header */
-.header {
-  position: absolute;
+header {
   width: 100%;
-  padding: 32px 32px 0px 32px;
-  background: transparent;
-  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 32px;
 }
 
 .container-header {
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 20px;
+  justify-content: space-between;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .logo {
   display: flex;
-  align-items: center;
+  gap: 8px;
 }
 
 .logo-img {
@@ -29,8 +26,6 @@
 }
 
 .logo-text {
-  text-align: center;
-  margin-left: 8px;
   font-size: 20px;
   font-weight: 600;
   color: #fff;
@@ -38,19 +33,7 @@
 
 /* Кнопка Menu */
 .menu-btn {
-  background-color: transparent;
-  color: #fff;
-  font-weight: 500;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
-
-.menu-btn:hover {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
+  display: none;
 }
 
 /* Навігація */
@@ -94,26 +77,49 @@
 
 /* Кнопка Order the project */
 .btn {
-  background-color: #ed3b44;
-  padding: 18px 24px;
-  border-radius: 60px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.02em;
+  display: none;
 }
 
 .btn:hover {
   background-color: #e0373f;
 }
 
+.icon-header {
+  display: block;
+  fill: #fbfbfb;
+}
+
 /* Tablet */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .menu-btn {
+    background-color: transparent;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
     display: block;
   }
 
+  .menu-btn:hover {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+
   .btn {
+    background-color: #ed3b44;
+    padding: 18px 24px;
+    border-radius: 60px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    display: block;
+  }
+
+  .icon-header {
     display: none;
   }
 }
