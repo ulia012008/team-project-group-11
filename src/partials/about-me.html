@@ -10,7 +10,18 @@
                 </p>
             </div>
             <div class="about-me-text-container">
-                <img src="./img/about-me/my-photo.png" alt="about-me" width="680" height="700">
+                <picture>
+                    <source srcset="./img/about-me/my-photo-mob.png 1x, ./img/about-me/my-photo-mob.png@2x 2x"
+                        media="(max-width: 767px)">
+                    <source srcset="./img/about-me/my-photo-tab.png 1x, ./img/about-me/my-photo-tab@2x.png 2x"
+                        media="(min-width: 768px) and (max-width: 1439px)">
+                    <source srcset="./img/about-me/my-photo-desk.png 1x, ./img/about-me/my-photo-desk@2x.png 2x"
+                        media="(min-width: 1440px)">
+                    <img src="./img/about-me/my-photo-desk@2x.png" alt="about-me" width="680" height="700"
+                        loading="lazy">
+                </picture>
+
+                <!-- -->
             </div>
         </div>
         <div>
