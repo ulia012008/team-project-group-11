@@ -1,8 +1,3 @@
-.about-me-section {
-    margin-top: 64px;
-    margin-bottom: 64px;
-}
-
 .about-me-text-container {
     border-radius: 24px;
     height: 500px;
@@ -204,10 +199,11 @@
     .swiper-about-me {
         gap: 64px;
     }
-        .skills-swiper-about-me .swiper-wrapper {
-            min-width: 600px;
-            /* max-width: 1200px; */
-        }
+
+    .skills-swiper-about-me .swiper-wrapper {
+        min-width: 600px;
+        /* max-width: 1200px; */
+    }
 
     .about-me-text-container {
         height: 700px;
@@ -258,7 +254,7 @@
         gap: 72px;
     }
 
-    .skills-swiper-about-me .swiper-wrapper { 
+    .skills-swiper-about-me .swiper-wrapper {
         min-width: 1200px;
         /* max-width: 1200px; */
     }
