@@ -38,6 +38,7 @@
     .about-me-text-container {
         width: 50%;
         flex-direction: row;
+
     }
 }
 
@@ -231,11 +232,13 @@
     gap: 55px;
     align-items: center;
     justify-content: center;
+
 }
 
 .skills-swiper-about-me.swiper-slide {
     display: flex;
-
+    padding: 0;
+    margin: 0;
     justify-content: center;
     align-items: center;
     flex-shrink: 1;
@@ -247,11 +250,11 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+
     transition-property: transform;
     transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
     box-sizing: content-box;
-    padding: 0;
-    margin: 0;
+
 }
 
 .skills-swiper-about-me .swiper-notification {
@@ -272,6 +275,7 @@
     align-items: center;
     text-align: center;
     transition: transform 0.3s;
+
 }
 
 .red-about-me {
