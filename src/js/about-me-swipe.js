@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 
 export function initSkillsSliderAbout() {
-  const swiperAbout = new Swiper('.swiper-about-me', {
+  const swiperAbout = new Swiper('.skills-swiper-about-me', {
     slidesPerView: 2,
     loop: true,
     cssMode: true,
@@ -33,18 +33,16 @@ export function initSkillsSliderAbout() {
 }
 
 function updateActiveCircleAbout(swiperAbout) {
-  const circlesAbout = document.querySelectorAll('.circle-about-me');
-
+  const circlesAbout = document.querySelectorAll(
+    '.swiper-slide .circle-about-me'
+  );
   circlesAbout.forEach(circleAbout => {
     circleAbout.classList.remove('red-about-me');
     circleAbout.classList.add('outline-about-me');
   });
 
-  // Отримуємо активний слайд
   const activeSlideAbout = swiperAbout.slides[swiperAbout.activeIndex];
   const activeCircleAbout = activeSlideAbout.querySelector('.circle-about-me');
-
-  // Додаємо червоний клас активному елементу
   if (activeCircleAbout) {
     activeCircleAbout.classList.remove('outline-about-me');
     activeCircleAbout.classList.add('red-about-me');
