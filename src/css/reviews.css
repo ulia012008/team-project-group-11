@@ -1,5 +1,6 @@
 .reviews {
-    padding: 64px 16px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 @media screen and (min-width: 768px) {
@@ -168,7 +169,7 @@
 
 @media only screen and (min-width: 768px) {
     .swiper-reviews {
-        max-width: 728px;
+        max-width: 704px;
     }
 }
 

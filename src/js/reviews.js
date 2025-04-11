@@ -46,10 +46,7 @@ export async function init() {
         enabled: true,
         onlyInViewport: true,
       },
-      navigation: {
-        nextEl: '.reviews-swiper-button-next',
-        prevEl: '.reviews-swiper-button-prev',
-      },
+      
 
       // адаптивність 
   breakpoints: {
@@ -59,7 +56,7 @@ export async function init() {
     768: {
       slidesPerView: 2,
     },
-    1400: {
+    1440: {
       slidesPerView: 4,
     },
   },
