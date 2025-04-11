@@ -33,7 +33,9 @@ export function initSkillsSliderAbout() {
 }
 
 function updateActiveCircleAbout(swiperAbout) {
-  const circlesAbout = document.querySelectorAll('.swiper-slide .circle-about-me');
+  const circlesAbout = document.querySelectorAll(
+    '.swiper-slide .circle-about-me'
+  );
   circlesAbout.forEach(circleAbout => {
     circleAbout.classList.remove('red-about-me');
     circleAbout.classList.add('outline-about-me');
