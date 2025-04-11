@@ -191,14 +191,14 @@
 
 
 
-    @media only screen and (min-width: 1440px) {
-        .ac-text-about-me {
-            width: 50%;
-            text-align: left;
-        }
 
+@media only screen and (min-width: 1440px) {
+    .ac-text-about-me {
+        width: 50%;
+        text-align: left;
     }
 
+}
 
 
 
@@ -216,10 +216,13 @@
 
 
 
-
-
-
-   /* навички  */
+/* навички */
+.skills-about-me {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
 .swiper-about-me {
     position: relative;
@@ -227,19 +230,19 @@
     display: flex;
     gap: 55px;
     align-items: center;
-
+    justify-content: center;
 }
 
-.skills-swiper-about-me .swiper-slide {
+.skills-swiper-about-me.swiper-slide {
     display: flex;
-    flex-direction: row;
+
     justify-content: center;
     align-items: center;
     flex-shrink: 1;
 }
 
-.skills-swiper-about-me .swiper-wrapper {
-    position: relative;
+.skills-swiper-about-me.swiper-wrapper {
+
     overflow: hidden;
     width: 100%;
     display: flex;
@@ -281,7 +284,6 @@
 }
 
 .swiper-button-next-about-me {
-
     background-color: transparent;
     cursor: pointer;
     display: flex;
@@ -304,26 +306,45 @@
 
     .skills-swiper-about-me .swiper-wrapper {
         min-width: 600px;
-        /* max-width: 1200px;  */
+        /* max-width: 1200px; */
     }
 
+    .about-me-text-container {
+        height: 700px;
+    }
 
+    .about-me-text-container img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+    }
 
+    .about-me-text {
+        font-size: 38px;
+        line-height: 105%;
+        letter-spacing: -0.03em;
+    }
 
-
-
+    .open-arrow-about-me {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+    }
 
     /* Навички - слайдер */
 
     .circle-about-me {
         flex-shrink: 0;
-        width: 200px;
+        width: 200px !important;
         height: 200px;
         padding: 0;
         margin: 0;
         font-size: 20px;
     }
 
+    .ac-trigger-about-me {
+        height: 72px;
+    }
 
     .swiper-button-next-about-me .button-swiper-about-me {
         width: 40px;
@@ -342,4 +363,32 @@
         /* max-width: 1200px; */
     }
 
+    .about-me-content {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+    }
+
+    .about-me-text-container {
+        border-radius: 24px;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+    }
+
+    .ac-panel-about-me.open {
+        display: flex;
+        justify-content: flex-end;
+
+        text-align: left;
+    }
+
+    .ac-text-about-me {
+        width: 50%;
+        text-align: left;
+
+    }
 }

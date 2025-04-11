@@ -48,3 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initHeader(buttonElemLeft, buttonElemRight);
 });
+
+import { initFormSubmitWork } from './js/work-together';
+initFormSubmitWork();
