@@ -40,3 +40,33 @@ export function initEmailValidationWork() {
     }
   });
 }
+
+export function initFormSubmitWork() {
+  const form = document.getElementById('contact-form-work');
+  const emailInput = document.getElementById('email-input-work');
+  const commentsInput = form.elements['comments'];
+
+  if (!form || !emailInput || !commentsInput) return;
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const email = emailInput.value.trim();
+    const comments = commentsInput.value.trim();
+
+    simulatePostRequest({ email, comments });
+
+    showSuccessModalWork();
+    form.reset();
+  });
+}
+
+function simulatePostRequest(data) {
+  return fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+}
