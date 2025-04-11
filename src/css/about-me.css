@@ -27,6 +27,7 @@
     background: var(--cards);
 }
 
+
 @media only screen and (min-width: 768px) {
     .about-me-text-container {
         height: 700px;
@@ -39,6 +40,9 @@
         flex-direction: row;
     }
 }
+
+
+
 
 /* text */
 .about-me-text {
@@ -183,17 +187,17 @@
     .ac-text-about-me {
         padding-bottom: 32px;
     }
-}
+
+
+
 
 @media only screen and (min-width: 1440px) {
     .ac-text-about-me {
         width: 50%;
         text-align: left;
     }
+
 }
-
-
-
 
 
 
@@ -223,7 +227,7 @@
     display: flex;
     gap: 55px;
     align-items: center;
-    justify-content: center;
+
 }
 
 .skills-swiper-about-me .swiper-slide {
@@ -277,6 +281,7 @@
 }
 
 .swiper-button-next-about-me {
+
     background-color: transparent;
     cursor: pointer;
     display: flex;
@@ -306,17 +311,13 @@
 
 
 
-    .open-arrow-about-me {
-        width: 40px;
-        height: 40px;
-        transition: transform 0.3s ease;
-    }
 
-    /* Навички - слайдер 
+
+    /* Навички - слайдер */
 
     .circle-about-me {
         flex-shrink: 0;
-        width: 200px !important;
+        width: 200px;
         height: 200px;
         padding: 0;
         margin: 0;
@@ -339,12 +340,5 @@
     .skills-swiper-about-me .swiper-wrapper {
         min-width: 1200px;
         /* max-width: 1200px; */
-/* }
+ }
 
-  
-
-
-
-
-
- }   */
