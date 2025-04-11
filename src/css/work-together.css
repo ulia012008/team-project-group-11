@@ -101,7 +101,12 @@
     max-width: 100%;
 
 }
-
+@media only screen and (min-width: 768px){
+  .input-work,
+    .input-work-comments {
+        width: 245px;
+    }
+}
 @media only screen and (min-width: 1440px) {
 
     .input-work,

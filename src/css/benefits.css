@@ -90,6 +90,7 @@
   height: auto; /* чтобы карточки могли адаптироваться по содержимому */
 }
 .link-benefits {
+  display: inline-block;
   font-family: 'Inter Tight';
   font-style: normal;
   font-weight: 500;
@@ -110,9 +111,9 @@
   word-wrap: break-word;
 }
 .link-benefits:hover {
-  background-color: #ED3B44;
-  border-color: #ED3B44;
-  color: #FFFFFF;
+  background-color: #ed3b44;
+  border-color: #ed3b44;
+  color: #ffffff;
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
