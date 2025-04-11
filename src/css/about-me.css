@@ -191,13 +191,14 @@
 
 
 
-@media only screen and (min-width: 1440px) {
-    .ac-text-about-me {
-        width: 50%;
-        text-align: left;
+    @media only screen and (min-width: 1440px) {
+        .ac-text-about-me {
+            width: 50%;
+            text-align: left;
+        }
+
     }
 
-}
 
 
 
@@ -218,8 +219,7 @@
 
 
 
-
-/* навички 
+    /* навички 
 
 .swiper-about-me {
     position: relative;
@@ -340,5 +340,6 @@
     .skills-swiper-about-me .swiper-wrapper {
         min-width: 1200px;
         /* max-width: 1200px; */
- }
+    }
 
+}
