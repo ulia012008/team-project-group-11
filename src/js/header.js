@@ -5,7 +5,7 @@ export function initHeader() {
   const nav = document.getElementById('nav');
   const navLinks = document.querySelectorAll('.nav-link');
   const orderBtn = document.querySelector('.btn');
-
+  
   menuBtn.addEventListener('click', () => {
     nav.classList.toggle('open');
   });
