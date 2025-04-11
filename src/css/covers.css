@@ -1,5 +1,8 @@
 .covers {
     background-image: url(../img/covers/elements_vectors.png);
+    background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     overflow: hidden;
     display: flex;
     flex-direction: column;
