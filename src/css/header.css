@@ -6,6 +6,7 @@ header {
   position: absolute;
   top: 32px;
 }
+
 .container-header {
   justify-content: space-between;
   display: flex;
@@ -37,7 +38,7 @@ header {
 
 /* Навігація */
 .nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -46,43 +47,57 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: translateY(-100%);
-  background: #111;
+  background-image: url('../img/hero.png');
+  /* приклад назви зображення */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 999;
 }
+
 .nav.open {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
+
 .close-btn {
   position: absolute;
   top: 32px;
-  right: 16px;
+  right: 24px;
   font-size: 36px;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  z-index: 1000;
 }
+
 .nav-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 5px;
   align-items: center;
   justify-content: center;
-  margin-top: 50%;
-}
-.nav-link {
-  color: #fff;
+  margin-top: 24px;
+
+  font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
-  transition: color 0.3s ease;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
 }
+
+.nav-link {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
 .nav-link:hover {
   text-decoration: underline;
   text-decoration-skip-ink: none;
@@ -92,18 +107,20 @@ header {
 .btn {
   display: none;
 }
+
 .btn-mobile {
-  margin-top: auto;
   margin-bottom: 48px;
   background-color: #ed3b44;
-  padding: 18px 24px;
+  padding: 18px 32px;
   border-radius: 60px;
   color: #fff;
   font-weight: 500;
   font-size: 16px;
-  letter-spacing: -0.02em;
   border: none;
+  text-align: center;
+  text-decoration: none;
 }
+
 .btn:hover {
   background-color: #e0373f;
 }
@@ -126,10 +143,12 @@ header {
     transition: color 0.3s ease;
     display: block;
   }
+
   .menu-btn:hover {
     text-decoration: underline;
     text-decoration-skip-ink: none;
   }
+
   .btn {
     background-color: #ed3b44;
     padding: 18px 24px;
@@ -151,18 +170,21 @@ header {
     transition: all 0.3s ease;
     word-wrap: break-word;
   }
+
   .icon-header {
     display: none;
   }
+
   .nav {
     justify-self: start;
     background: transparent;
   }
+
   .nav {
     position: absolute;
     top: 50%;
-    left: 48%; 
-    height: auto; 
+    left: 48%;
+    height: auto;
     width: auto;
     background-color: transparent;
     transform: none;
@@ -190,4 +212,76 @@ header {
 
 body.menu-open {
   overflow: hidden;
+}
+
+.nav-mobile {
+  position: fixed;
+
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../img/hero.png);
+  z-index: 999;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-mobile.open {
+  transform: translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-mobile-list {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+}
+
+.nav-mobile-list .nav-link {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-mobile {
+  margin-bottom: 48px;
+  background-color: #ed3b44;
+  padding: 18px 32px;
+  border-radius: 60px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transform: translateY(-100%);
+  }
+
+  .nav.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
