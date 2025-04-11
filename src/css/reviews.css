@@ -5,14 +5,15 @@
 
 @media screen and (min-width: 768px) {
     .reviews {
-        padding: 96px 32px;
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
 }
 
 
 @media only screen and (min-width: 1440px) {
     .reviews {
-        padding: 165px 25px;
+        padding: 165px 0;
     }
 }
 
@@ -170,6 +171,7 @@
 @media only screen and (min-width: 768px) {
     .swiper-reviews {
         max-width: 704px;
+        width: 704px;
     }
 }
 
@@ -177,6 +179,7 @@
 @media only screen and (min-width: 1440px) {
     .swiper-reviews {
         max-width: 1386px;
+        width: 1386px;
     }
 }
 
