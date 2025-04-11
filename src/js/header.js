@@ -4,11 +4,8 @@ export function initHeader() {
   const closeBtn = document.getElementById('close-btn');
   const nav = document.getElementById('nav');
   const navLinks = document.querySelectorAll('.nav-link');
-  const orderBtn = document.querySelector('.btn');
-  
-  menuBtn.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
+  const orderBtnDesktop = document.querySelector('.btn');
+  const orderBtnMobile = document.querySelector('.btn-mobile');
 
   const openMenu = () => {
     nav.classList.add('open');
@@ -20,6 +17,7 @@ export function initHeader() {
     document.body.classList.remove('menu-open');
   };
 
+  menuBtn.addEventListener('click', openMenu);
   burgerIcon.addEventListener('click', openMenu);
   closeBtn.addEventListener('click', closeMenu);
 
@@ -35,12 +33,16 @@ export function initHeader() {
     });
   });
 
-  orderBtn.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.getElementById('work-together');
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+  [orderBtnDesktop, orderBtnMobile].forEach(btn => {
+    if (btn) {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.getElementById('work-together');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+        closeMenu();
+      });
     }
-    closeMenu();
   });
 }
