@@ -1,27 +1,74 @@
-#hero {
-  background-image: url('../img/hero.png');
+.hero-section {
+  position: relative;
+  background-image: image-set(url('../img/hero/hero_mob.png') 1x,
+      url('../img/hero/hero_mob@2x.png') 2x);
   background-position: center;
-  background-size: 1440px;
+  background-size: 375px;
   background-repeat: no-repeat;
-  padding-bottom: 1px;
-  margin-bottom: 64px;
 }
 
-.hero_title {
-  margin-top: 169px;
-  font-weight: 500;
-  font-size: 50px;
-  line-height: 100%;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: #fafafa;
+@media (min-width: 768px) {
+  .hero-section {
+    background-image: image-set(url('../img/hero/hero_tab.png') 1x,
+        url('../img/hero/hero_tab@2x.png') 2x);
+    background-size: 768px;
+
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-section {
+    max-width: 1440px;
+    background-image: image-set(url('../img/hero/hero_up_desk.png') 1x,
+        url('../img/hero/hero_up_desk@2x.png') 2x);
+    background-position: left;
+    background-size: 50%;
+    background-repeat: no-repeat;
+
+    height: auto;
+    margin: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+
+  }
+}
+
+h1 {
+  font-size: clamp(36px, 8vw, 135px);
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 700;
+  color: #FAFAFA;
+  line-height: 1.1;
+  margin: 0 0 40px;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials_item,
+.socials_item_mail {
+  display: inline-block;
+}
+
+.socials_link {
+  color: #FAFAFA;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+.socials {
+  display: flex;
   gap: 4px;
-  margin-top: 212px;
-  margin-bottom: 32px;
+
 }
 
 .socials_item {
@@ -54,17 +101,18 @@
 }
 
 @media (min-width: 768px) {
+
+
+
   .hero_title {
-    margin-top: 188px;
+
     text-align: left;
-    font-size: 90px;
-    width: auto;
-    height: auto;
+
+
   }
 
   .socials {
-    margin-top: 150px;
-    margin-bottom: 80px;
+
     width: auto;
     justify-content: right;
   }
@@ -75,7 +123,7 @@
   }
 
   .socials_item_mail {
-    width: 223px;
+
     height: 55px;
     padding-left: 24px;
   }
@@ -84,18 +132,13 @@
     font-size: 16px;
   }
 
-  .hero_content {
-    padding: 0 20px;
-  }
+
 }
 
 @media (min-width: 1440px) {
-  .hero_title {
-    width: 1084px;
-    font-size: 90px;
-    margin: 0 auto;
-    margin-top: 188px;
-  }
+
+
+  .hero_title {}
 
   .socials {
     justify-content: flex-end;

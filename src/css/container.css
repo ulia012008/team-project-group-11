@@ -1,6 +1,6 @@
 section {
 
-  padding-bottom: 64px;
+  padding-top: 64px;
   /* нижній відступ */
 }
 
@@ -27,7 +27,7 @@ section {
 /* Стилі для десктопів (від 1440px) */
 @media only screen and (min-width: 1440px) {
   section {
-  
+
     padding-bottom: 96px;
 
   }
