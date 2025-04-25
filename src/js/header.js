@@ -1,6 +1,5 @@
 export function initHeader() {
-  const menuBtn = document.getElementById('menu-btn');
-  const burgerIcon = document.querySelector('.icon-header');
+  const menuTriggers = document.querySelectorAll('.menu-trigger');
   const closeBtn = document.getElementById('close-btn');
   const nav = document.getElementById('nav');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -17,9 +16,13 @@ export function initHeader() {
     document.body.classList.remove('menu-open');
   };
 
-  menuBtn.addEventListener('click', openMenu);
-  burgerIcon.addEventListener('click', openMenu);
-  closeBtn.addEventListener('click', closeMenu);
+  menuTriggers.forEach(trigger => {
+    trigger.addEventListener('click', openMenu);
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeMenu);
+  }
 
   navLinks.forEach(link => {
     link.addEventListener('click', e => {

@@ -1,18 +1,19 @@
 .hero-section {
-  position: relative;
+  padding: 0;
   background-image: image-set(url('../img/hero/hero_mob.png') 1x,
       url('../img/hero/hero_mob@2x.png') 2x);
   background-position: center;
   background-size: 375px;
   background-repeat: no-repeat;
-  min-height: 812px;
-  padding: 0;
+}
+
+.hero-container {
+
+
+  height: 812px;
 
 }
 
-.hero-section.сontainer {
-  position: relative;
-}
 
 @media only screen and (min-width: 768px) {
   .hero-section {
@@ -42,8 +43,8 @@
 
 
 
-.title {
-  position: absolute;
+.title-hero {
+
   padding-top: 281px;
   font-weight: 500;
   font-size: 50px;
@@ -52,20 +53,22 @@
   text-transform: uppercase;
   color: var(--main-text);
   text-align: left;
+  max-width: 343px;
+  margin: auto;
 }
 
 @media only screen and (min-width: 768px) {
-  .title {
+  .title-hero {
     font-size: 90px;
     padding-top: 300px;
   }
 }
 
 .socials {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
+
+
+
+  justify-content: flex-end;
   list-style: none;
   padding: 0;
   display: flex;
@@ -75,12 +78,8 @@
 
 @media only screen and (min-width: 768px) {
   .socials {
-    left: auto;
-    /* Забираємо центрування */
     transform: none;
     right: 32px;
-    /* Встановлюємо правий відступ */
-    justify-content: flex-end;
     gap: 8px;
   }
 
@@ -101,61 +100,4 @@
   padding: 7px 7px;
   height: 37px;
   cursor: pointer;
-}
-
-
-
-
-
-
-
-
-.socials_link {
-  font-size: 14px;
-  color: #fafafa;
-}
-
-@media (min-width: 768px) {
-
-
-
-  .hero_title {
-
-    text-align: left;
-
-
-  }
-
-  .socials {
-
-    width: auto;
-    justify-content: right;
-  }
-
-  .socials_item {
-    width: 55px;
-    height: 55px;
-  }
-
-  .socials_item_mail {
-
-    height: 55px;
-    padding-left: 24px;
-  }
-
-  .socials_link {
-    font-size: 16px;
-  }
-
-
-}
-
-@media (min-width: 1440px) {
-
-
-  .hero_title {}
-
-  .socials {
-    justify-content: flex-end;
-  }
 }
