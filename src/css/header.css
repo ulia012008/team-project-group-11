@@ -15,6 +15,8 @@
     font-size: 19px;
     font-weight: 500;
     color: var(--main-text);
+    width: 80px;
+    height: 80px;
 }
 
 .icon-burger {
