@@ -1,0 +1,303 @@
+/* Header */
+
+.container-header {
+  position: absolute;
+  top: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 10;
+  max-width: 375px;
+  width: 100%;
+  padding: 0 16px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+}
+
+@media (min-width: 768px) {
+  .container-header {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container-header {
+    max-width: 1440px;
+  }
+}
+
+.logo {
+  display: flex;
+  gap: 8px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Кнопка Menu */
+.menu-btn {
+  display: none;
+}
+
+/* Навігація */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../img/hero/hero_mob.png');
+  /* приклад назви зображення */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.nav.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 289px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+}
+
+.nav-link {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+/* Кнопка Order the project */
+.btn {
+  display: none;
+}
+
+.btn-mobile {
+  margin-bottom: 48px;
+  background-color: #ed3b44;
+  padding: 18px 32px;
+  border-radius: 60px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #e0373f;
+}
+
+.icon-header {
+  display: block;
+  fill: #fbfbfb;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .menu-btn {
+    display: flex;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+
+  }
+
+  .menu-btn:hover {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+
+  .btn {
+    background-color: #ed3b44;
+    padding: 18px 24px;
+    border-radius: 60px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    display: flex;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 36px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    order: 1;
+    flex-grow: 0;
+    transition: all 0.3s ease;
+    word-wrap: break-word;
+  }
+
+  .icon-header {
+    display: none;
+  }
+
+  .nav {
+    justify-self: start;
+    background: transparent;
+  }
+
+  .nav {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    transform: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  .btn-mobile {
+    display: none;
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.nav-mobile {
+  position: fixed;
+
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../img/hero.png);
+  z-index: 999;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-mobile.open {
+  transform: translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-mobile-list {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+}
+
+.nav-mobile-list .nav-link {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-mobile {
+  margin-bottom: 48px;
+  background-color: #ed3b44;
+  padding: 18px 32px;
+  border-radius: 60px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transform: translateY(-100%);
+  }
+
+  .nav.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
